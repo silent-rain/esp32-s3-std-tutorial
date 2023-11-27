@@ -1,0 +1,16 @@
+# main检测到任务中的堆栈溢出
+# 与C相比，Rust通常需要一点额外的主任务堆栈大小（默认值为3K）
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8000
+
+# 使用此选项可将FreeRTOS内核滴答频率设置为1000 Hz（默认为100 Hz）。
+# 这允许线程睡眠使用1ms的粒度（默认情况下为10ms）。
+#CONFIG_FREERTOS_HZ=1000
+
+# Workaround for https://github.com/espressif/esp-idf/issues/7631
+#CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=n
+#CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=n
+
+
+# 禁用看门狗定时器
+# CONFIG_INT_WDT=n
+# CONFIG_ESP_TASK_WDT=n
