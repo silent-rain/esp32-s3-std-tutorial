@@ -122,5 +122,3 @@ espflash /dev/ttyUSB0 target/xtensa-esp32s3-espidf/debug/<your-project-name>
 ```shell
 espflash monitor /dev/ttyUSB0
 ```
-
-rustup target add xtensa-esp32s3-espidf。您可以参考这个文档 3 来了解如何为 ESP32-S3 设置 rust 开发环境。
