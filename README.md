@@ -12,3 +12,4 @@
 - [The Rust on ESP Book 简体中文版](https://narukara.github.io/rust-on-esp-book-zh-cn/introduction.html)
 - [官方开发环境搭建文档](https://github.com/esp-rs/esp-idf-template/tree/master)
 - [针对 RISC-V 和 Xtensa 目标](https://narukara.github.io/rust-on-esp-book-zh-cn/installation/riscv-and-xtensa.html)
+- [esp-idf-sys 配置](https://github.com/esp-rs/esp-idf-sys/blob/master/BUILD-OPTIONS.md#sdkconfig)

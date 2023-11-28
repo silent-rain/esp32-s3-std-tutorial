@@ -39,9 +39,16 @@ fn main() {
         esp_idf_svc::sys::esp_image_get_flash_size(esp_image_flash_size_t_ESP_IMAGE_FLASH_SIZE_16MB)
     };
 
+    // let chip = unsafe {
+    //     esp_idf_svc::sys::esp_chip_info(esp_image_flash_size_t_ESP_IMAGE_FLASH_SIZE_16MB)
+    // };
+
     // 打印内存和外存的信息
     println!("Total memory: {} bytes", total_memory);
     println!("Free memory: {} bytes", free_memory);
     println!("Total PSRAM: {} bytes", total_psram);
     println!("Free PSRAM: {} bytes", free_psram);
+
+    // 打印外部闪存的大小，单位为MB
+    // println!("External flash size: {} MB", chip.size / 1024 / 1024);
 }

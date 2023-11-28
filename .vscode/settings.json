@@ -1,0 +1,9 @@
+{
+  "rust.all_targets": false,
+  "rust.target": "xtensa-esp32s3-espidf",
+  "rust-analyzer.checkOnSave.allTargets": false,
+  "rust-analyzer.checkOnSave.extraArgs": [
+    "--target",
+    "xtensa-esp32s3-espidf"
+  ]
+}

@@ -19,4 +19,8 @@ MCU = "esp32s3"
 # Note: this variable is not used by the pio builder (`cargo build --features pio`)
 ESP_IDF_VERSION = "v5.1.1"
 # 工具链路径设置为全局（global）
-ESP_IDF_TOOLS_INSTALL_DIR = { value = "global" }
+ESP_IDF_TOOLS_INSTALL_DIR = {value = "global"}
+ESP_IDF_PATH_ISSUES = "warn"
+ESP_IDF_C_ENV_VARS_ISSUES = "warn"
+# esp-idf 组件管理器, 运行期间自动从组件注册表或 Git 存储库中获取组件
+# ESP_IDF_COMPONENT_MANAGER = "no"
