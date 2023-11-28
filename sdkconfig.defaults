@@ -14,3 +14,7 @@ CONFIG_ESP_MAIN_TASK_STACK_SIZE=8000
 # 禁用看门狗定时器
 # CONFIG_INT_WDT=n
 # CONFIG_ESP_TASK_WDT=n
+
+# ESP-IDF 会尝试在本地网络中注册主机名 espressif
+# http://espressif/
+CONFIG_LWIP_LOCAL_HOSTNAME="espressif"
