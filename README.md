@@ -5,6 +5,7 @@
 ## 项目文档
 
 - [Archlinux 环境搭建](./docs/Archlinux环境搭建.md)
+- [esp-idf 环境配置](./docs/esp-idf环境配置.md)
 - [问题答疑 Q&A](./docs/问题答疑Q&A.md)
 
 ## 参考文档
@@ -13,3 +14,6 @@
 - [官方开发环境搭建文档](https://github.com/esp-rs/esp-idf-template/tree/master)
 - [针对 RISC-V 和 Xtensa 目标](https://narukara.github.io/rust-on-esp-book-zh-cn/installation/riscv-and-xtensa.html)
 - [esp-idf-sys 配置](https://github.com/esp-rs/esp-idf-sys/blob/master/BUILD-OPTIONS.md#sdkconfig)
+- [Linux 和 macOS 平台工具链的标准设置](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/linux-macos-setup.html)
+- [查看模组的 PSRAM](https://espressif-docs.readthedocs-hosted.com/projects/esp-faq/zh-cn/latest/software-framework/storage/psram.html)
+- [esp-idf C 绑定参考](https://esp-rs.github.io/esp-idf-svc/esp_idf_svc/index.html)
