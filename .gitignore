@@ -1,4 +1,10 @@
 # /.vscode
-/.embuild
+
+# rust
 /target
 /Cargo.lock
+
+# esp-idf
+build
+.embuild
+sdkconfig.old

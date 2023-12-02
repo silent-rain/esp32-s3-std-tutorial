@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    "sugatoray.vscode-git-extension-pack",
+    "rust-lang.rust-analyzer"
+  ]
+}
