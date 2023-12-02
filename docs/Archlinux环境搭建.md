@@ -2,8 +2,6 @@
 
 ## 安装系统依赖
 
-## 系统依赖
-
 ```shell
 sudo pacman -S --needed gcc git make flex bison gperf python cmake ninja ccache dfu-util libusb
 ```
@@ -92,6 +90,14 @@ cat $HOME/export-esp.sh >> ~/.bashrc
 source ~/.bashrc
 ```
 
+## 本地构建器 ESP_IDF SDK
+
+```shell
+cd ~/.espup
+
+git clone --branch v5.1.1 https://github.com/espressif/esp-idf.git
+```
+
 ## 构建/运行生成的项目：
 
 ```shell
@@ -109,9 +115,20 @@ cargo run
 - 有关[espflash 使用的更多详细信息，请参阅自述文件](https://github.com/esp-rs/espflash/tree/main/espflash#usage)
 
 ```shell
-espflash /dev/ttyUSB0 target/[xtensa-esp32-espidf|xtensa-esp32s2-espidf|xtensa-esp32s3-espidf|riscv32imc-esp-espidf]/debug/<your-project-name>
+# 板信息打印有关连接的目标设备的信息
+sudo espflash board-info
 
-espflash /dev/ttyUSB0 target/xtensa-esp32s3-espidf/debug/<your-project-name>
+espflash /dev/ttyACM0 target/[xtensa-esp32-espidf|xtensa-esp32s2-espidf|xtensa-esp32s3-espidf|riscv32imc-esp-espidf]/debug/<your-project-name>
+
+espflash flash /dev/ttyACM0 target/xtensa-esp32s3-espidf/debug/<your-project-name>
+
+# 旧版本烧录
+espflash --monitor target/xtensa-esp32s3-espidf/debug/<your-project-name>
+
+# 新版本烧录
+espflash flash target/xtensa-esp32s3-espidf/debug/<your-project-name>
+# 烧录的同时进行监控
+espflash flash --monitor target/xtensa-esp32s3-espidf/debug/<your-project-name>
 ```
 
 ## monitor
