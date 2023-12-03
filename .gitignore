@@ -1,8 +1,8 @@
-# /.vscode
+# .vscode
 
 # rust
-/target
-/Cargo.lock
+target
+Cargo.lock
 
 # esp-idf
 build
