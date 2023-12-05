@@ -2,6 +2,14 @@
 
 这是一个关于 ESP32-S3-R16N8 开发板学习案例，使用 Rust 语言的 STD 环境进行嵌入式开发。
 
+## 示例目录
+
+### 基础示例
+
+- [代码禁用开门狗](src/bin/basic/code_disable_wdg.rs)
+- [SDK 配置禁用开门狗](src/bin/basic/sdkconfig_disable_wdg.rs)
+- [Hello World](src/bin/basic/hello_world.rs)
+
 ## 项目文档
 
 - [Archlinux 环境搭建](./docs/Archlinux环境搭建.md)
