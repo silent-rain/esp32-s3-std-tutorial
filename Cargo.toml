@@ -71,3 +71,8 @@ path = "src/bin/basic/sdkconfig_disable_wdg.rs"
 [[bin]]
 name = "hello_world"
 path = "src/bin/basic/hello_world.rs"
+
+# 硬件
+[[bin]]
+name = "hardware_memory_size"
+path = "src/bin/hardware/hardware_memory_size.rs"

@@ -10,6 +10,10 @@
 - [SDK 配置禁用开门狗](src/bin/basic/sdkconfig_disable_wdg.rs)
 - [Hello World](src/bin/basic/hello_world.rs)
 
+## 硬件
+
+- [查看内存大小](src/bin/hardware/hardware_memory_size.rs)
+
 ## 项目文档
 
 - [Archlinux 环境搭建](./docs/Archlinux环境搭建.md)
