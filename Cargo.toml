@@ -61,13 +61,15 @@ idf_path = "/home/one/.espup/esp-idf"
 # ESP_IDF_COMP_ESP_PSRAM_ENABLED = "true"
 
 
+# 开门狗- SDK 中禁用开门狗后将不会生成对应的代码
+# [[bin]]
+# name = "code_disable_wdg"
+# path = "src/bin/basic/code_disable_wdg.rs"
+# [[bin]]
+# name = "sdkconfig_disable_wdg"
+# path = "src/bin/basic/sdkconfig_disable_wdg.rs"
+
 # 基础示例
-[[bin]]
-name = "code_disable_wdg"
-path = "src/bin/basic/code_disable_wdg.rs"
-[[bin]]
-name = "sdkconfig_disable_wdg"
-path = "src/bin/basic/sdkconfig_disable_wdg.rs"
 [[bin]]
 name = "hello_world"
 path = "src/bin/basic/hello_world.rs"

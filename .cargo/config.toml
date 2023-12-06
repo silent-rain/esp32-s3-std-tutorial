@@ -5,7 +5,7 @@ rustflags = ["-Z", "threads=8"]
 
 [target.xtensa-esp32s3-espidf]
 linker = "ldproxy"
-runner = "espflash flash --monitor"
+runner = "sudo espflash flash --monitor"
 rustflags = [
     "--cfg",
     "espidf_time64",

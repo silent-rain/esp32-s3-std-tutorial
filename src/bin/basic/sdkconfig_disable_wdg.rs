@@ -7,6 +7,8 @@
 //! # 禁用看门狗定时器
 //! # CONFIG_INT_WDT=n
 //! # CONFIG_ESP_TASK_WDT=n
+//! # CONFIG_ESP_INT_WDT=n
+//! # CONFIG_ESP_TASK_WDT_EN=n
 //! ```
 //!
 //! ## 运行
