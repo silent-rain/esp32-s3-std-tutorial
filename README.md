@@ -6,43 +6,17 @@
 
 ### 开门狗
 
-- [代码禁用开门狗](src/bin/basic/code_disable_wdg.rs)
-- [SDK 配置禁用开门狗](src/bin/basic/sdkconfig_disable_wdg.rs)
-- 注意: SDK 中禁用开门狗后将不会生成对应的代码
-- 启用开门狗配置或 TUI 中进行配置
-
-```text
-CONFIG_ESP_INT_WDT=y
-CONFIG_ESP_INT_WDT_TIMEOUT_MS=300
-CONFIG_ESP_INT_WDT_CHECK_CPU1=y
-CONFIG_ESP_TASK_WDT_EN=y
-CONFIG_ESP_TASK_WDT_INIT=y
-# CONFIG_ESP_TASK_WDT_PANIC is not set
-CONFIG_ESP_TASK_WDT_TIMEOUT_S=5
-CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0=y
-CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1=y
-# CONFIG_ESP_INT_WDT is not set
-# CONFIG_ESP_TASK_WDT_EN is not set
-
-CONFIG_INT_WDT=n
-CONFIG_INT_WDT_TIMEOUT_MS=300
-CONFIG_INT_WDT_CHECK_CPU1=y
-CONFIG_TASK_WDT=y
-CONFIG_ESP_TASK_WDT=n
-# CONFIG_TASK_WDT_PANIC is not set
-CONFIG_TASK_WDT_TIMEOUT_S=5
-CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU0=y
-CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU1=y
-# CONFIG_INT_WDT is not set
-```
+- [代码禁用开门狗](app/wdg/code_disable_wdg/README.md)
+- [SDK 配置禁用开门狗](app/wdg/sdkconfig_disable_wdg/README.md)
 
 ### 基础示例
 
-- [Hello World](src/bin/basic/hello_world.rs)
+- [Hello World](app/basic/hello_world/README.md)
+- [日志级别](app/basic/log_level/README.md)
 
 ## 硬件
 
-- [查看内存大小](src/bin/hardware/hardware_memory_size.rs)
+- [查看内存大小](app/hardware/hardware_memory_size/README.md)
 
 ## 项目文档
 

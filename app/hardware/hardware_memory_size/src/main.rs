@@ -1,9 +1,3 @@
-//! # 查看 esp32-s3 内存以及外存大小
-//!
-//! ## 运行
-//! ```shell
-//! cargo run --bin hardware_memory_size
-//! ```
 #![allow(clippy::empty_loop)]
 
 use esp_idf_svc::{

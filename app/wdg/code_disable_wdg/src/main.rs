@@ -1,9 +1,3 @@
-//! # 代码禁用开门狗
-//!
-//! ## 运行
-//! ```shell
-//! cargo run --bin code_disable_wdg
-//! ```
 #![allow(clippy::empty_loop)]
 use std::time::Duration;
 

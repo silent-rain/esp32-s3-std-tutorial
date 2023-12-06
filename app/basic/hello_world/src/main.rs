@@ -1,8 +1,3 @@
-//! # Hello World
-//! ## 运行
-//! ```shell
-//! cargo run --bin hello_world
-//! ```
 #![allow(clippy::empty_loop)]
 
 fn main() {
