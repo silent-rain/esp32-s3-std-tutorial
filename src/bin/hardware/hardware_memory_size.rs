@@ -5,13 +5,9 @@
 //! cargo run --bin hardware_memory_size
 //! ```
 #![allow(clippy::empty_loop)]
-use std::time::Duration;
 
 use esp_idf_svc::{
-    hal::{
-        peripherals::Peripherals,
-        task::{self, watchdog::TWDTConfig},
-    },
+    hal::peripherals::Peripherals,
     log::EspLogger,
     sys::{
         heap_caps_get_free_size, heap_caps_get_total_size, heap_caps_malloc_extmem_enable,
@@ -33,17 +29,7 @@ fn main() {
     log::set_max_level(log::LevelFilter::Info);
 
     // Get the peripherals
-    let peripherals = Peripherals::take().unwrap();
-
-    // 禁用开门狗
-    let config = TWDTConfig {
-        duration: Duration::from_secs(2),
-        panic_on_trigger: true,
-        subscribed_idle_tasks: enumset::EnumSet::empty(),
-    };
-    let driver = task::watchdog::TWDTDriver::new(peripherals.twdt, &config).unwrap();
-    // 停止 TWDT 并释放资源
-    drop(driver);
+    let _peripherals = Peripherals::take().unwrap();
 
     // 启用外存
     unsafe { heap_caps_malloc_extmem_enable(1000) };
