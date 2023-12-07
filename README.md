@@ -2,6 +2,13 @@
 
 这是一个关于 ESP32-S3-R16N8 开发板学习案例，使用 Rust 语言的 STD 环境进行嵌入式开发。
 
+![ESP32-S3-DevKitC-1](images/ESP32-S3-DevKitC-1.png)
+
+注：
+
+- 图片来源于网络。
+- ESP32-S3-DevKitC-1 标记是 RGB@IO48 引脚。
+
 ## 示例目录
 
 ### 开门狗
