@@ -3,9 +3,15 @@
 ## 提供示例
 
 ```text
-我希望您担任使用 Rust 编程语言进行 EPS32-S3 单片机的嵌入式开发专家。
-请指引我使用 esp-idf-svc 框架在 Rust Std 环境中进行嵌入式开发。
-请提供一个读取 ESP32-S3-N16R8（8MB PSRAM + 16MB FLASH）的开发板的 PSRAM 和 FLASH 内存大小的示例，请确保给出的示例的正确性。
+BACKGROUND:
+- 使用 Rust 编程语言进行嵌入式开发;
+- 使用 EPS32-S3-R16N8 单片机进行嵌入式开发;
+- 使用 esp-idf-svc 框架在 Rust Std 环境中进行嵌入式开发;
+- 请直接提供代码示例不用进行额外的解释;
+- 请确保给出的代码示例的正确性;
+QUESTION:
+请提供一个点亮开发板上 RGB LED 灯的示例。
+ANSWER:
 ```
 
 ## 提供示例 2

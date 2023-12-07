@@ -734,6 +734,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "hardware_multiple_rgb_led"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "neopixel",
+ "toml-cfg",
+]
+
+[[package]]
+name = "hardware_rgb_led"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
 name = "hash32"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -955,6 +980,14 @@ name = "nb"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8d5439c4ad607c3c23abf66de8c8bf57ba8adcd1f129e699851a6e43935d339d"
+
+[[package]]
+name = "neopixel"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "esp-idf-hal",
+]
 
 [[package]]
 name = "nix"

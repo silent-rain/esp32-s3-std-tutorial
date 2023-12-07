@@ -3,6 +3,7 @@
 # rust
 target
 # Cargo.lock
+examples/*
 
 # esp-idf
 build

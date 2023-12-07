@@ -14,9 +14,15 @@
 - [Hello World](app/basic/hello_world/README.md)
 - [日志级别](app/basic/log_level/README.md)
 
-## 硬件
+### 硬件
 
 - [查看内存大小](app/hardware/hardware_memory_size/README.md)
+- [RGB LED 闪烁](app/hardware/hardware_rgb_led/README.md)
+- [RGB LED 灯珠闪烁](app/hardware/hardware_multiple_rgb_led/README.md)
+
+### 组建库
+
+- [neopixel RGB LED](core/neopixel/README.md)
 
 ## 项目文档
 
@@ -33,3 +39,4 @@
 - [Linux 和 macOS 平台工具链的标准设置](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/linux-macos-setup.html)
 - [查看模组的 PSRAM](https://espressif-docs.readthedocs-hosted.com/projects/esp-faq/zh-cn/latest/software-framework/storage/psram.html)
 - [esp-idf C 绑定参考](https://esp-rs.github.io/esp-idf-svc/esp_idf_svc/index.html)
+- [ESP32-S3 系列芯片介绍](https://blog.csdn.net/MJiarong_personal/article/details/121726585)
