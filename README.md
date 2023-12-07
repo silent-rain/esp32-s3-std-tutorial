@@ -21,6 +21,11 @@
 - [RGB LED 闪烁](app/hardware/hardware_rgb_led/README.md)
 - [RGB LED 灯珠闪烁](app/hardware/hardware_multiple_rgb_led/README.md)
 
+### 延迟
+
+- [FreeRtos 延迟](app/delay/freertos_delay/README.md)
+- [定时器延迟](app/delay/async_timer_delay/README.md)
+
 ### 组建库
 
 - [neopixel RGB LED](core/neopixel/README.md)

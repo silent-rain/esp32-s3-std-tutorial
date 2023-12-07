@@ -1,18 +1,8 @@
 [package]
-name = "esp32-s3-std-tutorial"
+name = "async_timer_delay"
 version = "0.1.0"
-authors = ["silent-rain <2367221387@qq.com>"]
 edition = "2021"
-resolver = "2"
-# rust-version = "1.71"
 
-
-[profile.release]
-opt-level = "s"
-
-[profile.dev]
-debug = true # Symbols are nice and they don't increase the size on Flash
-# opt-level = "z"
 
 [features]
 default = ["std", "embassy", "esp-idf-svc/native"]
@@ -59,25 +49,3 @@ idf_path = "/home/one/.espup/esp-idf"
 # esp_idf_components = ["esp_psram", "spi_flash"]
 # esp_idf_components = ["spi_flash"]
 # ESP_IDF_COMP_ESP_PSRAM_ENABLED = "true"
-
-
-[workspace]
-members = [
-    # 开门狗
-    # "app/wdg/code_disable_wdg",
-    "app/wdg/sdkconfig_disable_wdg",
-    # 基础示例
-    "app/basic/hello_world",
-    "app/basic/log_level",
-    "app/basic/blinky",
-    # 硬件
-    "app/hardware/hardware_memory_size",
-    "app/hardware/hardware_rgb_led",
-    "app/hardware/hardware_multiple_rgb_led",
-    # 延迟
-    "app/delay/freertos_delay",
-    "app/delay/async_timer_delay",
-
-    # 组建库
-    "core/neopixel",
-]
