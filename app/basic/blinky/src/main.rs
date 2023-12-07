@@ -21,12 +21,16 @@ fn main() -> anyhow::Result<()> {
     let peripherals = Peripherals::take()?;
 
     let mut led = PinDriver::output(peripherals.pins.gpio4)?;
-    FreeRtos::delay_ms(1000);
 
-    log::trace!("this is trace!");
-    log::debug!("this is debug!");
-    log::info!("this is info!");
-    log::warn!("this is warn!");
-    log::error!("this is error!");
-    loop {}
+    log::warn!("loop");
+    loop {
+        led.set_high()?;
+        log::warn!("on");
+        // we are sleeping here to make sure the watchdog isn't triggered
+        FreeRtos::delay_ms(1000);
+
+        led.set_low()?;
+        log::warn!("off");
+        FreeRtos::delay_ms(1000);
+    }
 }

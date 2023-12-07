@@ -13,6 +13,7 @@
 
 - [Hello World](app/basic/hello_world/README.md)
 - [日志级别](app/basic/log_level/README.md)
+- [LED 闪烁](app/basic/blinky/README.md)
 
 ### 硬件
 

@@ -69,6 +69,7 @@ members = [
     # 基础示例
     "app/basic/hello_world",
     "app/basic/log_level",
+    "app/basic/blinky",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",
