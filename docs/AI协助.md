@@ -3,14 +3,14 @@
 ## 提供示例
 
 ```text
-BACKGROUND:
+REQUIRE:
 - 使用 Rust 编程语言进行嵌入式开发;
 - 使用 EPS32-S3-R16N8 单片机进行嵌入式开发;
 - 使用 esp-idf-svc 框架在 Rust Std 环境中进行嵌入式开发;
 - 请直接提供代码示例不用进行额外的解释;
 - 请确保给出的代码示例的正确性;
 QUESTION:
-请提供一个点亮开发板上 RGB LED 灯的示例。
+请提供一个ADC的使用示例。
 ANSWER:
 ```
 

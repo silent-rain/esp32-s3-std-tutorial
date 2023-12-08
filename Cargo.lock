@@ -3,6 +3,30 @@
 version = 3
 
 [[package]]
+name = "adc"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
+name = "adc_oneshot"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
 name = "aho-corasick"
 version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -909,6 +933,18 @@ name = "itoa"
 version = "1.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "af150ab688ff2122fcef229be89cb50dd66af9e01a4ff320cc137eecc9bacc38"
+
+[[package]]
+name = "joystick_potentiometer_3d"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
 
 [[package]]
 name = "js-sys"

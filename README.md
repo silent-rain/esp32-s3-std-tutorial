@@ -33,6 +33,14 @@
 - [FreeRtos 延迟](app/delay/freertos_delay/README.md)
 - [定时器延迟](app/delay/async_timer_delay/README.md)
 
+### ADC
+
+- [ADC](app/adc/adc/README.md)
+- [adc oneshot](app/adc/adc_oneshot/README.md)
+- [3D 摇杆电位器](app/adc/joystick_potentiometer_3d/README.md)
+
+3D joystick potentiometer
+
 ### 组建库
 
 - [neopixel RGB LED](core/neopixel/README.md)
