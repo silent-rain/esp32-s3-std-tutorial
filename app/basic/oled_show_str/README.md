@@ -6,7 +6,7 @@
 
 ### OLED
 
-- 正极: VCC 5.5v
+- 正极: VCC 3.3v
 - 负极: GND
 - SCL: IO4
 - SDA: IO5
