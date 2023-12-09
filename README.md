@@ -40,17 +40,15 @@
 - [adc oneshot](app/adc/adc_oneshot/README.md)
 - [3D 摇杆电位器](app/adc/joystick_potentiometer_3d/README.md)
 
-3D joystick potentiometer
+### C 绑定
+
+- [FFI Hello](app/ffi/ffi_hello/README.md)
+- [Bindgen Hello](app/ffi/bindgen_hello/README.md)
 
 ### 组建库
 
 - [neopixel RGB LED](core/neopixel/README.md)
 - [OLED 显示屏](core/oled/README.md)
-
-  # C 绑定
-
-- [FFI Hello](core/ffi_hello/README.md)
-- [Bindgen Hello](core/bindgen_hello/README.md)
 
 ## 其他示例库
 

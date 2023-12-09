@@ -82,10 +82,10 @@ members = [
     "app/adc/adc",
     "app/adc/adc_oneshot",
     "app/adc/joystick_potentiometer_3d",
+    # C 绑定
+    "app/ffi/ffi_hello",
+    "app/ffi/bindgen_hello",
     # 组建库
     "core/neopixel",
     "core/oled",
-    # C 绑定
-    "core/ffi_hello",
-    "core/bindgen_hello",
 ]
