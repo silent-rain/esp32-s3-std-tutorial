@@ -37,19 +37,31 @@ fn main() -> anyhow::Result<()> {
         ..Default::default()
     };
 
-    // 配置 ADC 引脚
+    // 配置 ADC
     let adc = AdcDriver::new(peripherals.adc1)?;
 
     // 配置遥控杆输入引脚
-    let mut adc_x_pin = AdcChannelDriver::new(&adc, peripherals.pins.gpio4, &config)?;
-    let mut adc_y_pin = AdcChannelDriver::new(&adc, peripherals.pins.gpio5, &config)?;
+    // 上下油门
+    let mut throttle_adc = AdcChannelDriver::new(&adc, peripherals.pins.gpio4, &config)?;
+    // 左右偏航
+    let mut yaw_adc = AdcChannelDriver::new(&adc, peripherals.pins.gpio5, &config)?;
+
+    // 上下俯仰
+    let mut pitch_adc = AdcChannelDriver::new(&adc, peripherals.pins.gpio6, &config)?;
+    // 左右横滚
+    let mut roll_adc = AdcChannelDriver::new(&adc, peripherals.pins.gpio7, &config)?;
 
     log::warn!("loop");
     loop {
-        let value = adc.read(&mut adc_x_pin)?;
-        log::info!("X Pin ADC value: {}", value);
-        let value = adc.read(&mut adc_y_pin)?;
-        log::info!("Y Pin ADC value: {}", value);
+        let throttle_value = adc.read(&mut throttle_adc)?;
+        log::info!("Throttle ADC value: {}", throttle_value);
+        let yaw_value = adc.read(&mut yaw_adc)?;
+        log::info!("Yaw ADC value: {}", yaw_value);
+
+        let pitch_value = adc.read(&mut pitch_adc)?;
+        log::info!("Pitch ADC value: {}", pitch_value);
+        let roll_value = adc.read(&mut roll_adc)?;
+        log::info!("Roll ADC value: {}", roll_value);
         FreeRtos::delay_ms(500);
     }
 }
