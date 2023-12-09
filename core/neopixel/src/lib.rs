@@ -20,22 +20,6 @@ use esp_idf_hal::{
     sys::EspError,
 };
 
-// fn main() {
-//     esp_idf_hal::sys::link_patches();
-
-//     let peripherals = Peripherals::take()?;
-
-//     // 3 seconds white at 10% brightness
-//     neopixel(Rgb::new(25, 25, 25), &mut tx)?;
-//
-
-//     // infinite rainbow loop at 20% brightness
-//     (0..360).cycle().try_for_each(|hue| {
-//         FreeRtos::delay_ms(10);
-//         let rgb = Rgb::from_hsv(hue, 100, 20)?;
-//         neopixel(rgb, &mut tx)
-//     })
-// }
 pub struct NeoPixel<'d> {
     tx: TxRmtDriver<'d>,
     data: Vec<Rgb>, // 灯珠颜色集合
