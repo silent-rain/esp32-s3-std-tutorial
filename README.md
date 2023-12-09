@@ -47,6 +47,11 @@
 - [neopixel RGB LED](core/neopixel/README.md)
 - [OLED 显示屏](core/oled/README.md)
 
+  # C 绑定
+
+- [FFI Hello](core/ffi_hello/README.md)
+- [Bindgen Hello](core/bindgen_hello/README.md)
+
 ## 其他示例库
 
 - [网络相关 esp-idf-svc](https://github.com/esp-rs/esp-idf-svc/tree/master/examples)

@@ -85,4 +85,7 @@ members = [
     # 组建库
     "core/neopixel",
     "core/oled",
+    # C 绑定
+    "core/ffi_hello",
+    "core/bindgen_hello",
 ]
