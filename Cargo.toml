@@ -70,6 +70,7 @@ members = [
     "app/basic/hello_world",
     "app/basic/log_level",
     "app/basic/blinky",
+    "app/basic/oled_show_str",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",
@@ -83,4 +84,5 @@ members = [
     "app/adc/joystick_potentiometer_3d",
     # 组建库
     "core/neopixel",
+    "core/oled",
 ]

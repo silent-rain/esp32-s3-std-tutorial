@@ -21,6 +21,7 @@
 - [Hello World](app/basic/hello_world/README.md)
 - [日志级别](app/basic/log_level/README.md)
 - [LED 闪烁](app/basic/blinky/README.md)
+- [OLED 显示屏](app/basic/oled_show_str/README.md)
 
 ### 硬件
 
@@ -44,6 +45,7 @@
 ### 组建库
 
 - [neopixel RGB LED](core/neopixel/README.md)
+- [OLED 显示屏](core/oled/README.md)
 
 ## 项目文档
 
