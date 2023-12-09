@@ -1,0 +1,41 @@
+[package]
+name = "oled_show_str"
+version = "0.1.0"
+edition = "2021"
+
+
+[features]
+default = ["std", "embassy", "esp-idf-svc/native"]
+
+std = ["alloc", "esp-idf-svc/binstart", "esp-idf-svc/std"]
+alloc = ["esp-idf-svc/alloc"]
+nightly = ["esp-idf-svc/nightly"]
+experimental = ["esp-idf-svc/experimental"]
+embassy = [
+    "esp-idf-svc/embassy-sync",
+    "esp-idf-svc/critical-section",
+    "esp-idf-svc/embassy-time-driver",
+]
+
+[dependencies]
+esp-idf-svc = { version = "0.47.3", default-features = false }
+enumset = "1.1.3"
+toml-cfg = "0.1.3"
+log = { version = "0.4", default-features = false }
+anyhow = "1.0.75"
+
+[dependencies.oled]
+path = "../../../core/oled"
+
+[build-dependencies]
+embuild = "0.31.4"
+toml-cfg = "0.1.3"
+
+[package.metadata.esp-idf-sys]
+mcu = "esp32s3"
+esp_idf_version = "v5.1.1"
+esp_idf_tools_install_dir = "global"
+esp_idf_sdkconfig = "sdkconfig"
+# 使用 ESP-IDF 的本地模式来禁用远程下载
+# git clone --branch v5.1.1 https://github.com/espressif/esp-idf.git
+idf_path = "/home/one/.espup/esp-idf"
