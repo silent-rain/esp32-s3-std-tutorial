@@ -5,6 +5,7 @@ use anyhow::Ok;
 use anyhow::Result;
 use esp_idf_hal::gpio::Output;
 use esp_idf_hal::gpio::OutputPin;
+use esp_idf_hal::gpio::Pin;
 use esp_idf_hal::gpio::PinDriver;
 use esp_idf_hal::peripheral::Peripheral;
 
@@ -13,8 +14,8 @@ use esp_idf_hal::peripheral::Peripheral;
 
 pub struct OLED<'d, SclPin, SdaPin>
 where
-    SclPin: OutputPin,
-    SdaPin: OutputPin,
+    SclPin: Pin + OutputPin,
+    SdaPin: Pin + OutputPin,
 {
     scl: PinDriver<'d, SclPin, Output>,
     sda: PinDriver<'d, SdaPin, Output>,
@@ -22,16 +23,13 @@ where
 
 impl<'d, SclPin, SdaPin> OLED<'d, SclPin, SdaPin>
 where
-    SclPin: OutputPin,
-    SdaPin: OutputPin,
+    SclPin: Pin + OutputPin,
+    SdaPin: Pin + OutputPin,
 {
     /// 初始化 OLED 配置
     /// 注意需要提前进行端口初始化
     /// 注意上电延时
-    pub fn new(
-        scl_pin: impl Peripheral<P = SclPin> + 'd,
-        sda_pin: impl Peripheral<P = SdaPin> + 'd,
-    ) -> Result<Self> {
+    pub fn new(scl_pin: SclPin, sda_pin: SdaPin) -> Result<Self> {
         // Creates the driver for a pin in output open-drain state.
         let mut scl = PinDriver::output_od(scl_pin)?;
         let mut sda = PinDriver::output_od(sda_pin)?;
@@ -142,8 +140,8 @@ where
 
 impl<'d, SclPin, SdaPin> OLED<'d, SclPin, SdaPin>
 where
-    SclPin: OutputPin,
-    SdaPin: OutputPin,
+    SclPin: Pin + OutputPin,
+    SdaPin: Pin + OutputPin,
 {
     /// OLED设置光标位置
     /// y: 以左上角为原点, 向下方向的坐标, 范围: 0~7

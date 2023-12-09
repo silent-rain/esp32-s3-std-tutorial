@@ -21,6 +21,7 @@
 - [Hello World](app/basic/hello_world/README.md)
 - [日志级别](app/basic/log_level/README.md)
 - [LED 闪烁](app/basic/blinky/README.md)
+- [LED 流水灯](app/basic/led_flow_light/README.md)
 - [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
 
 ### 硬件
