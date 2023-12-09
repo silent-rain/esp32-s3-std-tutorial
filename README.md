@@ -21,13 +21,15 @@
 - [Hello World](app/basic/hello_world/README.md)
 - [日志级别](app/basic/log_level/README.md)
 - [LED 闪烁](app/basic/blinky/README.md)
-- [OLED 显示屏](app/basic/oled_show_str/README.md)
+- [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
 
 ### 硬件
 
 - [查看内存大小](app/hardware/hardware_memory_size/README.md)
 - [RGB LED 闪烁](app/hardware/hardware_rgb_led/README.md)
 - [RGB LED 灯珠闪烁](app/hardware/hardware_multiple_rgb_led/README.md)
+
+### I2C
 
 ### 延迟
 
