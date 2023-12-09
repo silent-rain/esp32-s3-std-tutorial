@@ -47,6 +47,13 @@
 - [neopixel RGB LED](core/neopixel/README.md)
 - [OLED 显示屏](core/oled/README.md)
 
+## 其他示例库
+
+- [网络相关 esp-idf-svc](https://github.com/esp-rs/esp-idf-svc/tree/master/examples)
+- [IDF HAL 库相关 esp-idf-hal](https://github.com/esp-rs/esp-idf-hal/tree/master/examples)
+- [NO_STD HAL 库培训材料](https://github.com/esp-rs/no_std-training/blob/main/README.md)
+- [STD HAL 库培训材料](https://github.com/esp-rs/std-training/blob/main/README.md)
+
 ## 项目文档
 
 - [Archlinux 环境搭建](./docs/Archlinux环境搭建.md)
