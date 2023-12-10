@@ -1,0 +1,3 @@
+[esp32-s3-std-tutorial]
+wifi_ssid = "Silent Rain"
+wifi_psk = "pass"
