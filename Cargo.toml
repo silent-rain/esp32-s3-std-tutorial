@@ -78,6 +78,8 @@ members = [
     "app/basic/buzzer",
     "app/basic/opposing_infrared_sensor_buzzer",
     "app/basic/light_sensor_control_buzzer",
+    # 中断
+    "app/interrupt/opposing_infrared_sensor_count",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",

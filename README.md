@@ -30,6 +30,10 @@
 - [对射式红外传感器控制蜂鸣器](app/basic/opposing_infrared_sensor_buzzer/README.md)
 - [光敏传感器控制蜂鸣器](app/basic/light_sensor_control_buzzer/README.md)
 
+### 中断
+
+- [对射式红外传感器中断计次](app/interrupt/opposing_infrared_sensor_count/README.md)
+
 ### 硬件
 
 - [查看内存大小](app/hardware/hardware_memory_size/README.md)
