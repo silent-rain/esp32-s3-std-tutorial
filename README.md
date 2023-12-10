@@ -27,6 +27,7 @@
 - [按钮异步任务](app/basic/button_async/README.md)
 - [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
 - [蜂鸣器](app/basic/buzzer/README.md)
+- [对射式红外传感器控制蜂鸣器](app/basic/opposing_infrared_sensor_buzzer/README.md)
 - [光敏传感器控制蜂鸣器](app/basic/light_sensor_control_buzzer/README.md)
 
 ### 硬件

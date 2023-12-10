@@ -1,18 +1,8 @@
 [package]
-name = "esp32-s3-std-tutorial"
+name = "opposing_infrared_sensor_buzzer"
 version = "0.1.0"
-authors = ["silent-rain <2367221387@qq.com>"]
 edition = "2021"
-resolver = "2"
-# rust-version = "1.71"
 
-
-[profile.release]
-opt-level = "s"
-
-[profile.dev]
-debug = true # Symbols are nice and they don't increase the size on Flash
-# opt-level = "z"
 
 [features]
 default = ["std", "embassy", "esp-idf-svc/native"]
@@ -59,41 +49,3 @@ idf_path = "/home/one/.espup/esp-idf"
 # esp_idf_components = ["esp_psram", "spi_flash"]
 # esp_idf_components = ["spi_flash"]
 # ESP_IDF_COMP_ESP_PSRAM_ENABLED = "true"
-
-
-[workspace]
-members = [
-    # 开门狗
-    # "app/wdg/code_disable_wdg",
-    "app/wdg/sdkconfig_disable_wdg",
-    # 基础示例
-    "app/basic/hello_world",
-    "app/basic/log_level",
-    "app/basic/blinky",
-    "app/basic/led_flow_light",
-    "app/basic/oled_show_str",
-    "app/basic/button",
-    "app/basic/button_toggle",
-    "app/basic/button_async",
-    "app/basic/buzzer",
-    "app/basic/opposing_infrared_sensor_buzzer",
-    "app/basic/light_sensor_control_buzzer",
-    # 硬件
-    "app/hardware/hardware_memory_size",
-    "app/hardware/hardware_rgb_led",
-    "app/hardware/hardware_multiple_rgb_led",
-    # 延迟
-    "app/delay/freertos_delay",
-    "app/delay/async_timer_delay",
-    # ADC
-    "app/adc/adc",
-    "app/adc/adc_oneshot",
-    "app/adc/joystick_potentiometer_3d",
-    # C 绑定
-    "app/ffi/ffi_hello",
-    # "app/ffi/bindgen_hello", // 暂不支持
-    # 组建库
-    "core/neopixel",
-    "core/oled",
-    "core/esp32s3-nrf24l01",
-]
