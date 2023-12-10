@@ -5,8 +5,8 @@
 ```text
 REQUIRE:
 - 使用 Rust 编程语言进行嵌入式开发;
-- 使用 EPS32-S3-R16N8 单片机进行嵌入式开发;
-- 使用 esp-idf-svc 框架在 Rust Std 环境中进行嵌入式开发;
+- 使用 EPS32-S3 单片机进行嵌入式开发;
+- 使用 Rust 的 esp-idf-svc 库在 Rust Std 环境中进行嵌入式开发;
 - 请直接提供代码示例不用进行额外的解释;
 - 请确保给出的代码示例的正确性;
 QUESTION:
@@ -19,7 +19,7 @@ ANSWER:
 ```text
 我希望您担任以 Rust 编程语言进行 EPS32-S3 单片机的嵌入式开发专家。
 请指根据三个引号包裹内的要求，使用 esp-idf-svc 框架在 Rust Std 环境中进行嵌入式开发，并确保提供代码的正确性。
-以下代码读取EPS32-S3-R16N8 的内存不正确，请帮我分析原因并提供解决方案
+以下代码读取EPS32-S3 的内存不正确，请帮我分析原因并提供解决方案
 ”“”
 code:
 // 获取内存的总大小和可用大小
@@ -46,12 +46,27 @@ Free PSRAM: 0 bytes
 “”“
 ```
 
+## 代码移植
+
+```text
+REQUIRE:
+- 使用 Rust 编程语言进行嵌入式开发;
+- 使用 EPS32-S3 单片机进行嵌入式开发;
+- 使用 Rust 的 esp-idf-svc 库在 Rust Std 环境中进行嵌入式开发;
+- 请我下面提供的代码库移植为以 esp-idf-svc 进行实现的代码;
+- 请确保移植代码的正确性;
+QUESTION:
+请提供仔细阅读 stm32 实现的 embedded-nrf24l01 代码库，然后用 esp-idf-svc 库进行移植到 ESP32-S3。
+embedded-nrf24l01 代码库地址 https://github.com/astro/embedded-nrf24l01
+ANSWER:
+```
+
 ## 错误修复
 
 ```text
 REQUIRE:
 - 使用 Rust 编程语言进行嵌入式开发;
-- 使用 EPS32-S3-R16N8 单片机进行嵌入式开发;
+- 使用 EPS32-S3 单片机进行嵌入式开发;
 - 使用 esp-idf-svc 框架在 Rust Std 环境中进行嵌入式开发;
 - 请直接提供代码示例不用进行额外的解释;
 - 请确保给出的代码示例的正确性;

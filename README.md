@@ -22,7 +22,11 @@
 - [日志级别](app/basic/log_level/README.md)
 - [LED 闪烁](app/basic/blinky/README.md)
 - [LED 流水灯](app/basic/led_flow_light/README.md)
+- [按钮](app/basic/button/README.md)
+- [按钮 Toggle](app/basic/button_toggle/README.md)
+- [按钮异步任务](app/basic/button_async/README.md)
 - [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
+- [蜂鸣器](app/basic/buzzer/README.md)
 
 ### 硬件
 
@@ -52,6 +56,7 @@
 
 - [neopixel RGB LED](core/neopixel/README.md)
 - [OLED 显示屏](core/oled/README.md)
+- [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
 ## 其他示例库
 

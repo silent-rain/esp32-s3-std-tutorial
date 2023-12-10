@@ -72,6 +72,10 @@ members = [
     "app/basic/blinky",
     "app/basic/led_flow_light",
     "app/basic/oled_show_str",
+    "app/basic/button",
+    "app/basic/button_toggle",
+    "app/basic/button_async",
+    "app/basic/buzzer",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",
@@ -89,4 +93,5 @@ members = [
     # 组建库
     "core/neopixel",
     "core/oled",
+    "core/esp32s3-nrf24l01",
 ]
