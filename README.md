@@ -27,6 +27,7 @@
 - [按钮异步任务](app/basic/button_async/README.md)
 - [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
 - [蜂鸣器](app/basic/buzzer/README.md)
+- [光敏传感器控制蜂鸣器](app/basic/light_sensor_control_buzzer/README.md)
 
 ### 硬件
 
@@ -56,7 +57,7 @@
 
 - [neopixel RGB LED](core/neopixel/README.md)
 - [OLED 显示屏](core/oled/README.md)
-- [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
+- x[esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
 ## 其他示例库
 

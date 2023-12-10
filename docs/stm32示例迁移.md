@@ -1,11 +1,5 @@
 # Stm32 示例迁移
 
-### 通用 GPIO
-
-- [蜂鸣器](./app/general_gpio/buzzer)
-- [按键控制 LED](./app/general_gpio/key_control_led)
-- [光敏传感器控制蜂鸣器](./app/general_gpio/light_sensor_control_buzzer)
-
 ### 中断
 
 - [对射式红外传感器计次](./app/interrupt/opposing_infrared_sensor_count)
