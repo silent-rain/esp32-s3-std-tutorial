@@ -1,0 +1,16 @@
+[package]
+name = "embedded-nrf24l01"
+version = "0.2.0"
+authors = ["Astro <astro@spaceboyz.net>"]
+description = "A driver for NRF24L01(+) transceivers on embedded-hal platforms."
+license = "Apache-2.0"
+categories = ["embedded", "no-std", "hardware-support", "network-programming"]
+keywords = ["driver", "embedded-hal", "wireless", "nrf", "nrf24l01"]
+repository = "https://github.com/astro/embedded-nrf24l01"
+homepage = "https://github.com/astro/embedded-nrf24l01"
+edition = "2018"
+
+[dependencies]
+embedded-hal = "0.2.3"
+bitfield = "0.13.2"
+nb = "0.1.2"

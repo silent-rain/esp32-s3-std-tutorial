@@ -1,7 +1,7 @@
 use core::fmt;
 
 use anyhow::{Ok, Result};
-use esp_idf_hal::prelude::*;
+use esp_idf_hal::prelude::FromValueType;
 use esp_idf_hal::{
     gpio::{InputPin, Output, OutputPin, PinDriver},
     peripheral::Peripheral,
@@ -16,6 +16,7 @@ where
 {
     ce: PinDriver<'d, CE, Output>,
     csn: PinDriver<'d, CSN, Output>,
+    spi: SpiDeviceDriver<'d, SpiDriver<'d>>,
 }
 
 impl<'d, CE, CSN> fmt::Debug for NRF24L01<'d, CE, CSN>
@@ -53,7 +54,7 @@ where
         let driver = SpiDriver::new::<SPI2>(spi2, sclk, mosi, miso, &SpiDriverConfig::new())?;
 
         let config = spi::config::Config::new().baudrate(26.MHz().into());
-        let mut spi_device = SpiDeviceDriver::new(&driver, cs, &config)?;
+        let spi_device = SpiDeviceDriver::new(driver, cs, &config)?;
 
         let mut ce_device = PinDriver::output(ce)?;
         let mut csn_device = PinDriver::output(csn)?;
@@ -64,6 +65,7 @@ where
         let nrt24 = NRF24L01 {
             ce: ce_device,
             csn: csn_device,
+            spi: spi_device,
         };
 
         Ok(nrt24)

@@ -103,4 +103,5 @@ members = [
     "core/oled",
     "core/esp32s3-nrf24l01",
     "core/embedded-nrf24l01",
+    "core/embedded-nrf24l01-d",
 ]
