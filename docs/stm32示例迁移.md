@@ -3,7 +3,6 @@
 ### 中断
 
 - [对射式红外传感器计次](./app/interrupt/opposing_infrared_sensor_count)
-- [对射式红外传感器计次 2](./app/interrupt/opposing_infrared_sensor_count2)
 - [按键中断电灯-EXTI](./app/interrupt/key_control_led_exti)
 - [旋转编码器计次](./app/interrupt/rotary_encoder_count)
 - [系统定时器中断](./app/interrupt/sys_timer_interrupt)
