@@ -9,18 +9,23 @@
 # issue against the rust-lang/cargo repository. If you're
 # editing this file be aware that the upstream Cargo.toml
 # will likely look very different (and much more reasonable)
-[package]
-name = "esp32s3-nrf24l01"
-version = "0.1.0"
-edition = "2021"
-authors = ["silent-rain <2367221387@qq.com>"]
-description = "A driver for NRF24L01(+) transceivers on embedded-hal platforms."
-keywords = ["driver", "wireless", "nrf", "nrf24l01"]
-categories = []
-repository = ""
 
-[dependencies]
-esp-idf-hal = "0.42.5"
-anyhow = "1.0.75"
-bitfield = "0.14.0"
-nb = "1.1.0"
+[package]
+edition = "2018"
+name = "embedded-nrf24l01"
+version = "0.2.0"
+authors = ["Astro <astro@spaceboyz.net>"]
+description = "A driver for NRF24L01(+) transceivers on embedded-hal platforms."
+homepage = "https://github.com/astro/embedded-nrf24l01"
+keywords = ["driver", "embedded-hal", "wireless", "nrf", "nrf24l01"]
+categories = ["embedded", "no-std", "hardware-support", "network-programming"]
+license = "Apache-2.0"
+repository = "https://github.com/astro/embedded-nrf24l01"
+[dependencies.bitfield]
+version = "0.13.2"
+
+[dependencies.embedded-hal]
+version = "0.2.3"
+
+[dependencies.nb]
+version = "0.1.2"
