@@ -33,15 +33,8 @@ fn main() -> anyhow::Result<()> {
     unsafe {
         gpio_install_isr_service(ESP_INTR_FLAG_LEVEL1 as i32);
 
-        gpio_isr_handler_add(
-            key.pin(),
-            Some(gpio_isr_handler),
-            std::ptr::null_mut(),
-        );
+        gpio_isr_handler_add(key.pin(), Some(gpio_isr_handler), std::ptr::null_mut());
     }
-
-    // 为 GPIO4 添加中断处理函数
-    // gpio_isr_handler_add(GPIO_INPUT_PIN, gpio_isr_handler, (void*) GPIO_INPUT_PIN);
 
     // Set up a variable that keeps track of press button count
     let mut count = 0_u32;
