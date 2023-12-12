@@ -13,10 +13,15 @@ extern crate bitfield;
 
 use core::fmt;
 use core::fmt::Debug;
-use embedded_hal::blocking::spi::Transfer as SpiTransfer;
-use embedded_hal::digital::v2::OutputPin;
 
 mod config;
+use esp_idf_hal::{
+    gpio::{InputPin, Output, OutputPin, PinDriver},
+    peripheral::Peripheral,
+    prelude::FromValueType,
+    spi::{self, SpiDeviceDriver, SpiDriver, SpiDriverConfig, SPI2},
+};
+
 pub use crate::config::{Configuration, CrcMode, DataRate};
 pub mod setup;
 
@@ -54,43 +59,57 @@ pub const MAX_ADDR_BYTES: usize = 5;
 /// * [`TxMode<D>`](struct.TxMode.html)
 ///
 /// where `D: `[`Device`](trait.Device.html)
-pub struct NRF24L01<
+pub struct NRF24L01<'d, E, CE, CSN>
+where
     E: Debug,
-    CE: OutputPin<Error = E>,
-    CSN: OutputPin<Error = E>,
-    SPI: SpiTransfer<u8>,
-> {
-    ce: CE,
-    csn: CSN,
-    spi: SPI,
+    CE: OutputPin,
+    CSN: OutputPin,
+{
+    ce: PinDriver<'d, CE, Output>,
+    csn: PinDriver<'d, CSN, Output>,
+    spi: SpiDeviceDriver<'d, SpiDriver<'d>>,
     config: Config,
+    _e: *const E,
 }
 
-impl<
-        E: Debug,
-        CE: OutputPin<Error = E>,
-        CSN: OutputPin<Error = E>,
-        SPI: SpiTransfer<u8, Error = SPIE>,
-        SPIE: Debug,
-    > fmt::Debug for NRF24L01<E, CE, CSN, SPI>
+impl<'d, E, CE, CSN> fmt::Debug for NRF24L01<'d, E, CE, CSN>
+where
+    E: Debug,
+    CE: OutputPin,
+    CSN: OutputPin,
 {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "NRF24L01")
     }
 }
 
-impl<
-        E: Debug,
-        CE: OutputPin<Error = E>,
-        CSN: OutputPin<Error = E>,
-        SPI: SpiTransfer<u8, Error = SPIE>,
-        SPIE: Debug,
-    > NRF24L01<E, CE, CSN, SPI>
+impl<'d, E, CE, CSN> NRF24L01<'d, E, CE, CSN>
+where
+    E: Debug,
+    CE: OutputPin,
+    CSN: OutputPin,
+    error::Error<E>: core::convert::From<esp_idf_hal::sys::EspError>,
 {
     /// Construct a new driver instance.
-    pub fn new(mut ce: CE, mut csn: CSN, spi: SPI) -> Result<StandbyMode<Self>, Error<SPIE>> {
-        ce.set_low().unwrap();
-        csn.set_high().unwrap();
+    pub fn new(
+        spi2: impl Peripheral<P = SPI2> + 'd,
+        sclk: impl Peripheral<P = impl OutputPin> + 'd,
+        miso: Option<impl Peripheral<P = impl InputPin + OutputPin> + 'd>,
+        mosi: impl Peripheral<P = impl OutputPin> + 'd,
+        cs: Option<impl Peripheral<P = impl OutputPin> + 'd>,
+        ce: CE,
+        csn: CSN,
+    ) -> Result<StandbyMode<Self>, Error<E>> {
+        let driver = SpiDriver::new::<SPI2>(spi2, sclk, mosi, miso, &SpiDriverConfig::new())?;
+
+        let config = spi::config::Config::new().baudrate(26.MHz().into());
+        let spi_device = SpiDeviceDriver::new(driver, cs, &config)?;
+
+        let mut ce_device = PinDriver::output(ce)?;
+        let mut csn_device = PinDriver::output(csn)?;
+
+        ce_device.set_low()?;
+        csn_device.set_high()?;
 
         // Reset value
         let mut config = Config(0b0000_1000);
@@ -98,35 +117,34 @@ impl<
         config.set_mask_tx_ds(false);
         config.set_mask_max_rt(false);
         let mut device = NRF24L01 {
-            ce,
-            csn,
-            spi,
+            ce: ce_device,
+            csn: csn_device,
+            spi: spi_device,
             config,
+            _e: core::ptr::null(),
         };
-        assert!(device.is_connected().unwrap());
+        assert!(device.is_connected()?);
 
         // TODO: activate features?
 
-        StandbyMode::power_up(device).map_err(|(_, e)| e)
+        Ok(StandbyMode::power_up(device).unwrap())
     }
 
     /// Reads and validates content of the `SETUP_AW` register.
-    pub fn is_connected(&mut self) -> Result<bool, Error<SPIE>> {
+    pub fn is_connected(&mut self) -> Result<bool, Error<E>> {
         let (_, setup_aw) = self.read_register::<SetupAw>()?;
         let valid = setup_aw.aw() >= 3 && setup_aw.aw() <= 5;
         Ok(valid)
     }
 }
 
-impl<
-        E: Debug,
-        CE: OutputPin<Error = E>,
-        CSN: OutputPin<Error = E>,
-        SPI: SpiTransfer<u8, Error = SPIE>,
-        SPIE: Debug,
-    > Device for NRF24L01<E, CE, CSN, SPI>
+impl<'d, E, CE, CSN> Device for NRF24L01<'d, E, CE, CSN>
+where
+    CE: OutputPin,
+    CSN: OutputPin,
+    E: Debug,
 {
-    type Error = Error<SPIE>;
+    type Error = Error<E>;
 
     fn ce_enable(&mut self) {
         self.ce.set_high().unwrap();
@@ -141,22 +159,24 @@ impl<
         command: &C,
     ) -> Result<(Status, C::Response), Self::Error> {
         // Allocate storage
-        let mut buf_storage = [0; 33];
+        let mut read_storage = [0; 33];
+        let mut write_storage = [0; 33];
         let len = command.len();
-        let buf = &mut buf_storage[0..len];
+        let read = &mut read_storage[0..len];
+        let write = &mut write_storage[0..len];
         // Serialize the command
-        command.encode(buf);
+        command.encode(write);
 
         // SPI transaction
         self.csn.set_low().unwrap();
-        let transfer_result = self.spi.transfer(buf).map(|_| {});
+        let transfer_result = self.spi.transfer(read, write).map(|_| {});
         self.csn.set_high().unwrap();
         // Propagate Err only after csn.set_high():
-        transfer_result?;
+        transfer_result.unwrap();
 
         // Parse response
-        let status = Status(buf[0]);
-        let response = C::decode_response(buf);
+        let status = Status(read[0]);
+        let response = C::decode_response(read);
 
         Ok((status, response))
     }

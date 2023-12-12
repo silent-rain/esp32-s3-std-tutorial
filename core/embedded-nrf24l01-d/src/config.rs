@@ -16,12 +16,6 @@ pub enum DataRate {
     R2Mbps,
 }
 
-impl Default for DataRate {
-    fn default() -> DataRate {
-        DataRate::R1Mbps
-    }
-}
-
 /// Supported CRC modes
 #[derive(Debug, PartialEq, Copy, Clone)]
 pub enum CrcMode {
@@ -116,18 +110,19 @@ pub trait Configuration {
         &mut self,
         mode: CrcMode,
     ) -> Result<(), <<Self as Configuration>::Inner as Device>::Error> {
-        self.device().update_config(|config| mode.set_config(config))
+        self.device()
+            .update_config(|config| mode.set_config(config))
     }
 
     /// Sets the interrupt mask
-    /// 
+    ///
     /// When an interrupt mask is set to true, the interrupt is masked and will not fire on the IRQ pin.
     /// When set to false, it will trigger the IRQ pin.
     fn set_interrupt_mask(
         &mut self,
         data_ready_rx: bool,
         data_sent_tx: bool,
-        max_retransmits_tx: bool
+        max_retransmits_tx: bool,
     ) -> Result<(), <<Self as Configuration>::Inner as Device>::Error> {
         self.device().update_config(|config| {
             config.set_mask_rx_dr(data_ready_rx);
