@@ -84,6 +84,7 @@ members = [
     "app/interrupt/key_isr3",
     "app/interrupt/opposing_infrared_sensor_count",
     "app/interrupt/button_isr",
+    "app/interrupt/rotary_encoder_count",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",

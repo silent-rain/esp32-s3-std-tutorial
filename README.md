@@ -37,6 +37,7 @@
 - [按键中断计次 3](app/interrupt/key_isr3/README.md)
 - [对射式红外传感器中断计次](app/interrupt/opposing_infrared_sensor_count/README.md)
 - [按键中断控制 LED 闪烁](app/interrupt/button_isr/README.md)
+- [旋转编码器计次](app/interrupt/rotary_encoder_count/README.md)
 
 ### 硬件
 
