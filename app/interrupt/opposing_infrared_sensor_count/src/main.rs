@@ -40,9 +40,6 @@ fn main() -> anyhow::Result<()> {
         );
     }
 
-    // 为 GPIO4 添加中断处理函数
-    // gpio_isr_handler_add(GPIO_INPUT_PIN, gpio_isr_handler, (void*) GPIO_INPUT_PIN);
-
     // Set up a variable that keeps track of press button count
     let mut count = 0_u32;
 
