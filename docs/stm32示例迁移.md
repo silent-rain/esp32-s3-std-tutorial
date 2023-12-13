@@ -2,9 +2,6 @@
 
 ### 中断
 
-- [系统定时器中断](./app/interrupt/sys_timer_interrupt)
-- [定时器中断计数-秒](./app/interrupt/timer_interrupt_count_by_seces)
-- [定时器中断计数-赫兹](./app/interrupt/timer_interrupt_count_by_hz)
 - [定时器外部时钟](./app/interrupt/timer_external_clock)
 - [RTC 告警中断闪烁 LED](./app/interrupt/rtc_alarm_blinky_irq)
 

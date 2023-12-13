@@ -1705,6 +1705,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "timer_alarm_isr"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
+name = "timer_isr"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
 name = "toml"
 version = "0.5.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
