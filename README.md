@@ -39,8 +39,8 @@
 - [按键中断控制 LED 闪烁](app/interrupt/button_isr/README.md)
 - [旋转编码器计次](app/interrupt/rotary_encoder_count/README.md)
 - [定时器中断](app/interrupt/timer_isr/README.md)
-- x[定时器中断](app/interrupt/timer_isr/README.md)
 - [定时器告警中断](app/interrupt/timer_alarm_isr/README.md)
+- [定时器通知](app/interrupt/timer_notify/README.md)
 
 ### 硬件
 

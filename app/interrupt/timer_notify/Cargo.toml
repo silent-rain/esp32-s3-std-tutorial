@@ -1,5 +1,5 @@
 [package]
-name = "timer_isr"
+name = "timer_notify"
 version = "0.1.0"
 edition = "2021"
 
