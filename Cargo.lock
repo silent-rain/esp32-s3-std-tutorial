@@ -1717,6 +1717,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "timer_external_clock"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
 name = "timer_notify"
 version = "0.1.0"
 dependencies = [

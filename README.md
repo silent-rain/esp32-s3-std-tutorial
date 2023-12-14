@@ -41,6 +41,7 @@
 - [定时器中断](app/interrupt/timer_isr/README.md)
 - [定时器告警中断](app/interrupt/timer_alarm_isr/README.md)
 - [定时器通知](app/interrupt/timer_notify/README.md)
+- [定时器外部时钟](app/interrupt/timer_external_clock/README.md)
 
 ### 硬件
 
