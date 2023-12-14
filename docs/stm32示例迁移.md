@@ -2,7 +2,6 @@
 
 ### 中断
 
-- [定时器外部时钟](./app/interrupt/timer_external_clock)
 - [RTC 告警中断闪烁 LED](./app/interrupt/rtc_alarm_blinky_irq)
 
 ### 端口重映射
