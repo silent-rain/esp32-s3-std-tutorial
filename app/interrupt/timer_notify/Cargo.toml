@@ -47,6 +47,4 @@ esp_idf_sdkconfig = "sdkconfig"
 idf_path = "/home/one/.espup/esp-idf"
 # esp-idf 组件管理器, 运行期间自动从组件注册表或 Git 存储库中获取组件
 # esp_idf_component_manager = "y"
-# esp_idf_components = ["esp_psram", "spi_flash"]
 # esp_idf_components = ["spi_flash"]
-# ESP_IDF_COMP_ESP_PSRAM_ENABLED = "true"
