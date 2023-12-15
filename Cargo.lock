@@ -1478,6 +1478,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "rtc_isr"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
 name = "rustc-hash"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

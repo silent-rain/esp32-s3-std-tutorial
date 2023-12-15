@@ -139,3 +139,10 @@ espflash flash --monitor target/xtensa-esp32s3-espidf/debug/<your-project-name>
 ```shell
 espflash monitor /dev/ttyUSB0
 ```
+
+## 参考文档
+
+- [官方开发环境搭建文档](https://github.com/esp-rs/esp-idf-template/tree/master)
+- [针对 RISC-V 和 Xtensa 目标](https://narukara.github.io/rust-on-esp-book-zh-cn/installation/riscv-and-xtensa.html)
+- [esp-idf-sys 配置](https://github.com/esp-rs/esp-idf-sys/blob/master/BUILD-OPTIONS.md#sdkconfig)
+- [Linux 和 macOS 平台工具链的标准设置](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/linux-macos-setup.html)

@@ -88,6 +88,7 @@ members = [
     "app/interrupt/timer_alarm_isr",
     "app/interrupt/timer_notify",
     "app/interrupt/timer_external_clock",
+    "app/interrupt/rtc_isr",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",
