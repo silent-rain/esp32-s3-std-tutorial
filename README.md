@@ -13,66 +13,66 @@
 
 ### 开门狗
 
-- [代码禁用开门狗](app/wdg/code_disable_wdg/README.md)
-- [SDK 配置禁用开门狗](app/wdg/sdkconfig_disable_wdg/README.md)
+- [x] [代码禁用开门狗](app/wdg/code_disable_wdg/README.md)
+- [x] [SDK 配置禁用开门狗](app/wdg/sdkconfig_disable_wdg/README.md)
 
 ### 基础示例
 
-- [Hello World](app/basic/hello_world/README.md)
-- [日志级别](app/basic/log_level/README.md)
-- [LED 闪烁](app/basic/blinky/README.md)
-- [LED 流水灯](app/basic/led_flow_light/README.md)
-- [按钮](app/basic/button/README.md)
-- [按钮 Toggle](app/basic/button_toggle/README.md)
-- [按钮异步任务](app/basic/button_async/README.md)
-- [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
-- [蜂鸣器](app/basic/buzzer/README.md)
-- [对射式红外传感器控制蜂鸣器](app/basic/opposing_infrared_sensor_buzzer/README.md)
-- [光敏传感器控制蜂鸣器](app/basic/light_sensor_control_buzzer/README.md)
+- [x] [Hello World](app/basic/hello_world/README.md)
+- [x] [日志级别](app/basic/log_level/README.md)
+- [x] [LED 闪烁](app/basic/blinky/README.md)
+- [x] [LED 流水灯](app/basic/led_flow_light/README.md)
+- [x] [按钮](app/basic/button/README.md)
+- [x] [按钮 Toggle](app/basic/button_toggle/README.md)
+- [x] [按钮异步任务](app/basic/button_async/README.md)
+- [x] [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
+- [x] [蜂鸣器](app/basic/buzzer/README.md)
+- [x] [对射式红外传感器控制蜂鸣器](app/basic/opposing_infrared_sensor_buzzer/README.md)
+- [x] [光敏传感器控制蜂鸣器](app/basic/light_sensor_control_buzzer/README.md)
 
 ### 中断
 
-- [按键中断计次 1](app/interrupt/key_isr1/README.md)
-- [按键中断计次 2](app/interrupt/key_isr2/README.md)
-- [按键中断计次 3](app/interrupt/key_isr3/README.md)
-- [对射式红外传感器中断计次](app/interrupt/opposing_infrared_sensor_count/README.md)
-- [按键中断控制 LED 闪烁](app/interrupt/button_isr/README.md)
-- [旋转编码器计次](app/interrupt/rotary_encoder_count/README.md)
-- [定时器中断](app/interrupt/timer_isr/README.md)
-- [定时器告警中断](app/interrupt/timer_alarm_isr/README.md)
-- [定时器通知](app/interrupt/timer_notify/README.md)
-- x[定时器外部时钟](app/interrupt/timer_external_clock/README.md)
-- x[RTC 中断](app/interrupt/rtc_isr/README.md)
+- [x] [按键中断计次 1](app/interrupt/key_isr1/README.md)
+- [x] [按键中断计次 2](app/interrupt/key_isr2/README.md)
+- [x] [按键中断计次 3](app/interrupt/key_isr3/README.md)
+- [x] [对射式红外传感器中断计次](app/interrupt/opposing_infrared_sensor_count/README.md)
+- [x] [按键中断控制 LED 闪烁](app/interrupt/button_isr/README.md)
+- [x] [旋转编码器计次](app/interrupt/rotary_encoder_count/README.md)
+- [x] [定时器中断](app/interrupt/timer_isr/README.md)
+- [x] [定时器告警中断](app/interrupt/timer_alarm_isr/README.md)
+- [x] [定时器通知](app/interrupt/timer_notify/README.md)
+- [ ] [定时器外部时钟](app/interrupt/timer_external_clock/README.md)
+- [ ] [RTC 中断](app/interrupt/rtc_isr/README.md)
 
 ### 硬件
 
-- [查看内存大小](app/hardware/hardware_memory_size/README.md)
-- [RGB LED 闪烁](app/hardware/hardware_rgb_led/README.md)
-- [RGB LED 灯珠闪烁](app/hardware/hardware_multiple_rgb_led/README.md)
+- [x] [查看内存大小](app/hardware/hardware_memory_size/README.md)
+- [x] [RGB LED 闪烁](app/hardware/hardware_rgb_led/README.md)
+- [x] [RGB LED 灯珠闪烁](app/hardware/hardware_multiple_rgb_led/README.md)
 
 ### I2C
 
 ### 延迟
 
-- [FreeRtos 延迟](app/delay/freertos_delay/README.md)
-- [定时器延迟](app/delay/async_timer_delay/README.md)
+- [x] [FreeRtos 延迟](app/delay/freertos_delay/README.md)
+- [x] [定时器延迟](app/delay/async_timer_delay/README.md)
 
 ### ADC
 
-- [ADC](app/adc/adc/README.md)
-- [adc oneshot](app/adc/adc_oneshot/README.md)
-- [3D 摇杆电位器](app/adc/joystick_potentiometer_3d/README.md)
+- [x] [ADC](app/adc/adc/README.md)
+- [x] [adc oneshot](app/adc/adc_oneshot/README.md)
+- [x] [3D 摇杆电位器](app/adc/joystick_potentiometer_3d/README.md)
 
 ### C 绑定
 
-- [FFI Hello](app/ffi/ffi_hello/README.md)
-- [Bindgen Hello](app/ffi/bindgen_hello/README.md)
+- [x] [FFI Hello](app/ffi/ffi_hello/README.md)
+- [ ] [Bindgen Hello](app/ffi/bindgen_hello/README.md)
 
 ### 组建库
 
-- [neopixel RGB LED](core/neopixel/README.md)
-- [OLED 显示屏](core/oled/README.md)
-- x[esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
+- [x] [neopixel RGB LED](core/neopixel/README.md)
+- [x] [OLED 显示屏](core/oled/README.md)
+- [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
 ## 其他示例库
 
