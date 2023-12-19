@@ -38,12 +38,16 @@
 - [x] [对射式红外传感器中断计次](app/interrupt/opposing_infrared_sensor_count/README.md)
 - [x] [按键中断控制 LED 闪烁](app/interrupt/button_isr/README.md)
 - [x] [旋转编码器计次](app/interrupt/rotary_encoder_count/README.md)
-- [x] [定时器中断](app/interrupt/timer_isr/README.md)
 - [x] [定时器告警中断](app/interrupt/timer_alarm_isr/README.md)
 - [x] [定时器通知](app/interrupt/timer_notify/README.md)
 - [ ] [定时器外部时钟](app/interrupt/timer_external_clock/README.md)
 - [ ] [RTC 中断](app/interrupt/rtc_isr/README.md)
 - [ ] [RTC 外部时钟](app/interrupt/rtc_gpio/README.md)
+
+### LEDC
+
+- [x] [LEDC 简单示例](app/ledc/ledc_simple/README.md)
+- [x] [LEDC 多线程](app/ledc/ledc_threads/README.md)
 
 ### 硬件
 

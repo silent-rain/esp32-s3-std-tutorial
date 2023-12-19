@@ -1117,6 +1117,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "ledc_simple"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "once_cell",
+ "toml-cfg",
+]
+
+[[package]]
+name = "ledc_threads"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "once_cell",
+ "toml-cfg",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.151"
 source = "registry+https://github.com/rust-lang/crates.io-index"
