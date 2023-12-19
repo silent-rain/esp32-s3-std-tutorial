@@ -1,13 +1,5 @@
 # Stm32 示例迁移
 
-### 中断
-
-- [RTC 告警中断闪烁 LED](./app/interrupt/rtc_alarm_blinky_irq)
-
-### 端口重映射
-
-- [禁用 JTAG 端口](./app/port_remap/disable_jtag_ports)
-
 ### PWM 脉冲宽度调制
 
 - [PWM 驱动呼吸灯](./app/pwm/pwm_led)
