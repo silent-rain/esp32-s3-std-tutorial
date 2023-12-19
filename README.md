@@ -43,6 +43,7 @@
 - [x] [定时器通知](app/interrupt/timer_notify/README.md)
 - [ ] [定时器外部时钟](app/interrupt/timer_external_clock/README.md)
 - [ ] [RTC 中断](app/interrupt/rtc_isr/README.md)
+- [ ] [RTC 外部时钟](app/interrupt/rtc_gpio/README.md)
 
 ### 硬件
 

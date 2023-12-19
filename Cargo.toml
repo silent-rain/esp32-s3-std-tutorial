@@ -85,8 +85,9 @@ members = [
     "app/interrupt/rotary_encoder_count",
     "app/interrupt/timer_alarm_isr",
     "app/interrupt/timer_notify",
-    "app/interrupt/timer_external_clock",
+    # "app/interrupt/timer_external_clock",
     # "app/interrupt/rtc_isr",
+    # "app/interrupt/rtc_gpio",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",
