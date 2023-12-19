@@ -2,8 +2,6 @@
 
 ### PWM 脉冲宽度调制
 
-- [PWM 驱动呼吸灯](./app/pwm/pwm_led)
-- [自定义引脚组合的 PWM 输出](./app/pwm/pwm_custom)
 - [PWM 驱动舵机](./app/pwm/pwm_driven_servo)
 - [PWM 驱动直流电机](./app/pwm/pwm_driven_motor)
 - [输入捕获模式测频率占空比](./app/pwm/pwm_input_capture_freq_duty_cycle)
