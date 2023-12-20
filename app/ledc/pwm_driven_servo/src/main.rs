@@ -39,7 +39,7 @@ fn main() -> anyhow::Result<()> {
         peripherals.pins.gpio5,
     )?;
 
-    // 总周期为20ms max_duty=1023
+    // 总周期为20ms 频率为 50 Hz max_duty=1023
     let max_duty = channel.get_max_duty();
     log::info!("Max Duty: {}", max_duty);
 
