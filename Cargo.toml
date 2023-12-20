@@ -88,9 +88,11 @@ members = [
     # "app/interrupt/timer_external_clock",
     # "app/interrupt/rtc_isr",
     # "app/interrupt/rtc_gpio",
-    # LEDC
+    # LEDC&PWM
     "app/ledc/ledc_simple",
     "app/ledc/ledc_threads",
+    "app/ledc/pwm_driven_servo",
+    "app/ledc/pwm_driven_motor",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",

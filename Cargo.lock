@@ -1427,6 +1427,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "pwm_driven_motor"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "once_cell",
+ "toml-cfg",
+]
+
+[[package]]
+name = "pwm_driven_servo"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "once_cell",
+ "toml-cfg",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"

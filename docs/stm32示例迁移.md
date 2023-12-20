@@ -2,8 +2,6 @@
 
 ### PWM 脉冲宽度调制
 
-- [PWM 驱动舵机](./app/pwm/pwm_driven_servo)
-- [PWM 驱动直流电机](./app/pwm/pwm_driven_motor)
 - [输入捕获模式测频率占空比](./app/pwm/pwm_input_capture_freq_duty_cycle)
 - [旋转编码器接口计数](./app/pwm/pwm_rotary_encoder_count)
 - [旋转编码器接口延时测速](./app/pwm/pwm_rotary_encoder_speed)
