@@ -95,6 +95,7 @@ members = [
     "app/ledc/pwm_driven_motor",
     # RMT
     "app/rmt/rmt_transceiver",
+    "app/rmt/rmt_musical_buzzer",
     # 编码器
     "app/encoder/rotary_encoder",
     "app/encoder/rotary_encoder_speed",

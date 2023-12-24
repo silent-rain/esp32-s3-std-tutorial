@@ -27,7 +27,7 @@ fn main() -> anyhow::Result<()> {
     let receive_config = RmtReceiveConfig::new().idle_threshold(700u16);
     let mut rx = RxRmtDriver::new(
         peripherals.rmt.channel2,
-        peripherals.pins.gpio4,
+        peripherals.pins.gpio2,
         &receive_config,
         250, // 环形缓冲区大小
     )?;
@@ -65,7 +65,7 @@ fn main() -> anyhow::Result<()> {
     // 默认使用一个内存块或64个信号，时钟分频器设置为80（1us tick）
     let mut tx = TxRmtDriver::new(
         peripherals.rmt.channel0,
-        peripherals.pins.gpio5,
+        peripherals.pins.gpio4,
         &RmtTransmitConfig::new(),
     )?;
 
