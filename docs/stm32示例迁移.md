@@ -1,10 +1,5 @@
 # Stm32 示例迁移
 
-### ADC 模数转换器
-
-- [AD 单通道](./app/adc/ad_single_channel)
-- [AD 多通道](./app/adc/ad_multichannel)
-
 ### DMA 数据转运
 
 - [打印内存地址](./app/dma/print_memory_address)

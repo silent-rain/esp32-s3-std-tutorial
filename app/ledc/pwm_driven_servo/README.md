@@ -41,7 +41,7 @@ angle = (duty/max_duty)*180
 
 ## 图示
 
-![](../../../images/PWM驱动舵机.jpg)
+![](../../../images/PWM驱动舵机引脚配置.jpg)
 
 ## 执行指令
 
