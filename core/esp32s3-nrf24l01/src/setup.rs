@@ -1,12 +1,11 @@
 //! Setup parameters for SPI
-
-use embedded_hal::spi;
+use esp_idf_hal::spi::config::{Mode, Phase, Polarity};
 
 /// SPI setup parameters
-pub fn spi_mode() -> spi::Mode {
-    spi::Mode {
-        polarity: spi::Polarity::IdleLow,
-        phase: spi::Phase::CaptureOnFirstTransition,
+pub fn spi_mode() -> Mode {
+    Mode {
+        polarity: Polarity::IdleLow,
+        phase: Phase::CaptureOnFirstTransition,
     }
 }
 

@@ -19,6 +19,7 @@ impl Payload {
     }
 
     /// Read length
+    #[allow(clippy::len_without_is_empty)]
     pub fn len(&self) -> usize {
         self.len
     }
@@ -33,6 +34,6 @@ impl AsRef<[u8]> for Payload {
 impl Deref for Payload {
     type Target = [u8];
     fn deref(&self) -> &[u8] {
-        &self.as_ref()
+        self.as_ref()
     }
 }
