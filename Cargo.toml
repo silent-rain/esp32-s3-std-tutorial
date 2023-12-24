@@ -93,6 +93,11 @@ members = [
     "app/ledc/ledc_threads",
     "app/ledc/pwm_driven_servo",
     "app/ledc/pwm_driven_motor",
+    # RMT
+    "app/rmt/rmt_transceiver",
+    # 编码器
+    "app/encoder/rotary_encoder",
+    "app/encoder/rotary_encoder_speed",
     # 硬件
     "app/hardware/hardware_memory_size",
     "app/hardware/hardware_rgb_led",
@@ -110,7 +115,6 @@ members = [
     # 组建库
     "core/neopixel",
     "core/oled",
+    "core/pcnt_encoder",
     "core/esp32s3-nrf24l01",
-    "core/embedded-nrf24l01",
-    "core/embedded-nrf24l01-d",
 ]

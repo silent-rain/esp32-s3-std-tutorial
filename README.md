@@ -51,6 +51,15 @@
 - [ ] [PWM 驱动舵机](app/ledc/pwm_driven_servo/README.md)
 - [x] [PWM 驱动直流电机](app/ledc/pwm_driven_motor/README.md)
 
+### RMT
+
+- [x] [RMT 收发器](app/rmt/rmt_transceiver/README.md)
+
+### 编码器
+
+- [x] [旋转编码器计数](app/encoder/rotary_encoder/README.md)
+- [x] [旋转编码器接口延时测速](app/encoder/rotary_encoder_speed/README.md)
+
 ### 硬件
 
 - [x] [查看内存大小](app/hardware/hardware_memory_size/README.md)
@@ -79,6 +88,7 @@
 
 - [x] [neopixel RGB LED](core/neopixel/README.md)
 - [x] [OLED 显示屏](core/oled/README.md)
+- [x] [PCNT 解码旋转编码器](core/pcnt_encoder/README.md)
 - [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
 ## 其他示例库
