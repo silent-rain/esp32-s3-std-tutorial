@@ -96,6 +96,7 @@ members = [
     # RMT
     "app/rmt/rmt_transceiver",
     "app/rmt/rmt_musical_buzzer",
+    "app/rmt/rmt_morse_code",
     # 编码器
     "app/encoder/rotary_encoder",
     "app/encoder/rotary_encoder_speed",

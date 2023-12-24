@@ -55,6 +55,7 @@
 
 - [x] [RMT 收发器](app/rmt/rmt_transceiver/README.md)
 - [x] [蜂鸣器播放歌曲](app/rmt/rmt_musical_buzzer/README.md)
+- [x] [发送摩尔斯电码](app/rmt/rmt_morse_code/README.md)
 
 ### 编码器
 

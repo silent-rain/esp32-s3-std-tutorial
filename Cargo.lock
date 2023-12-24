@@ -1499,6 +1499,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "rmt_morse_code"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "once_cell",
+ "toml-cfg",
+]
+
+[[package]]
 name = "rmt_musical_buzzer"
 version = "0.1.0"
 dependencies = [

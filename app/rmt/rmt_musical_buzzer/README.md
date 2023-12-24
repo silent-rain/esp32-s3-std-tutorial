@@ -11,7 +11,7 @@ Should play "Ode to Joy" on pin 17.
 
 - 正极: VCC
 - 负极: GND
-- I/O: IO4
+- I/O: IO17
 
 ## 执行指令
 
