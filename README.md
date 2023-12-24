@@ -80,6 +80,8 @@
 - [x] [ADC](app/adc/adc/README.md)
 - [x] [adc oneshot](app/adc/adc_oneshot/README.md)
 - [x] [3D 摇杆电位器](app/adc/joystick_potentiometer_3d/README.md)
+- [x] [电位器读取电压](app/adc/potentiometer_reading_voltage/README.md)
+- [x] [多通道读取数据](app/adc/ad_multichannel/README.md)
 
 ### C 绑定
 

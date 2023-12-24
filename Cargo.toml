@@ -111,6 +111,8 @@ members = [
     "app/adc/adc",
     "app/adc/adc_oneshot",
     "app/adc/joystick_potentiometer_3d",
+    "app/adc/potentiometer_reading_voltage",
+    "app/adc/ad_multichannel",
     # C 绑定
     # "app/ffi/ffi_hello",
     # "app/ffi/bindgen_hello", // 暂不支持
