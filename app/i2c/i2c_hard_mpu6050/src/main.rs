@@ -21,7 +21,7 @@ fn main() -> anyhow::Result<()> {
     let scl = peripherals.pins.gpio6;
 
     let mut mpu = Mpu6050::new(i2c, sda, scl)?;
-
+    mpu.wake_up()?;
     let id = mpu.get_id()?;
     log::info!("MPU6050 ID {id}");
 

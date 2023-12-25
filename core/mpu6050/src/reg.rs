@@ -14,7 +14,7 @@ const DEFAULT_SLAVE_ADDR: u8 = 0xD0;
 /// MPU6050 芯片
 pub struct Mpu6050<'d, SclPin, SdaPin>
 where
-    SclPin: Pin + InputPin + OutputPin,
+    SclPin: Pin + OutputPin,
     SdaPin: Pin + InputPin + OutputPin,
 {
     scl: PinDriver<'d, SclPin, Output>,
@@ -23,7 +23,7 @@ where
 
 impl<'d, SclPin, SdaPin> Mpu6050<'d, SclPin, SdaPin>
 where
-    SclPin: Pin + InputPin + OutputPin,
+    SclPin: Pin + OutputPin,
     SdaPin: Pin + InputPin + OutputPin,
 {
     fn i2c_w_scl(&mut self, bit_value: u8) -> Result<(), EspError> {
@@ -125,25 +125,27 @@ where
 
 impl<'d, SclPin, SdaPin> Mpu6050<'d, SclPin, SdaPin>
 where
-    SclPin: Pin + InputPin + OutputPin,
+    SclPin: Pin + OutputPin,
     SdaPin: Pin + InputPin + OutputPin,
 {
     pub fn new(scl: SclPin, sda: SdaPin) -> Result<Self, EspError> {
-        let scl_driver = PinDriver::output(scl)?;
+        let scl_driver = PinDriver::output_od(scl)?;
         let sda_driver = PinDriver::input_output(sda)?;
-        let mpu = Mpu6050 {
+        let mut mpu = Mpu6050 {
             scl: scl_driver,
             sda: sda_driver,
         };
 
+        // I2C 初始化
+        mpu.init_i2c()?;
+
+        // MPU6050 初始化
+        mpu.init_mpu6050()?;
         Ok(mpu)
     }
 
     /// MPU6050 初始化
     pub fn init_mpu6050(&mut self) -> Result<(), EspError> {
-        // I2C 初始化
-        self.init_i2c()?;
-
         // 解除休眠状态
         self.write_reg(MPU6050_PWR_MGMT_1, 0x01)?;
         self.write_reg(MPU6050_PWR_MGMT_2, 0x00)?;

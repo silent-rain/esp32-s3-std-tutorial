@@ -19,7 +19,6 @@ fn main() -> anyhow::Result<()> {
     let sda = peripherals.pins.gpio5;
     let scl = peripherals.pins.gpio6;
     let mut mpu = Mpu6050::new(scl, sda)?;
-    mpu.init_mpu6050()?;
 
     let id = mpu.get_id()?;
     log::info!("MPU6050 ID {id}");

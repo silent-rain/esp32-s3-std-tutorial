@@ -33,16 +33,22 @@ impl<'d> Mpu6050<'d> {
 
     /// 唤醒 MPU6050
     pub fn wake_up(&mut self) -> Result<(), EspError> {
+        // 解除休眠状态
         self.i2c
             .write(DEFAULT_SLAVE_ADDR, &[MPU6050_PWR_MGMT_1, 0x01], BLOCK)?;
         self.i2c
             .write(DEFAULT_SLAVE_ADDR, &[MPU6050_PWR_MGMT_2, 0x00], BLOCK)?;
+        // 陀螺仪采样率，典型值：0x07(125Hz)
         self.i2c
             .write(DEFAULT_SLAVE_ADDR, &[MPU6050_SMPLRT_DIV, 0x09], BLOCK)?;
+
+        // 低通滤波频率，典型值：0x06(5Hz)
         self.i2c
             .write(DEFAULT_SLAVE_ADDR, &[MPU6050_CONFIG, 0x06], BLOCK)?;
+        // 陀螺仪自检及测量范围，典型值：0x18(不自检，2000deg/s)
         self.i2c
             .write(DEFAULT_SLAVE_ADDR, &[MPU6050_GYRO_CONFIG, 0x18], BLOCK)?;
+        // 加速计自检、测量范围及高通滤波频率，典型值：0x01(不自检，2G，5Hz
         self.i2c
             .write(DEFAULT_SLAVE_ADDR, &[MPU6050_ACCEL_CONFIG, 0x18], BLOCK)?;
 

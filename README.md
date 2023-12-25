@@ -84,7 +84,7 @@
 ### I2C
 
 - [ ] [软件读写 MPU6050](app/i2c/i2c_soft_mpu6050/README.md)
-- [ ] [硬件读写 MPU6050](app/i2c/i2c_hard_mpu6050/README.md)
+- [x] [硬件读写 MPU6050](app/i2c/i2c_hard_mpu6050/README.md)
 
 ### SPI
 
@@ -98,7 +98,7 @@
 - [x] [neopixel RGB LED](core/neopixel/README.md)
 - [x] [OLED 显示屏](core/oled/README.md)
 - [x] [PCNT 解码旋转编码器](core/pcnt_encoder/README.md)
-- [ ] [I2C MPU6050](core/mpu6050/README.md)
+- [x] [I2C MPU6050](core/mpu6050/README.md)
 - [ ] [SPI W25Q64](core/w25q64/README.md)
 - [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
