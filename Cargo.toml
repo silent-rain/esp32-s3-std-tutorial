@@ -113,12 +113,18 @@ members = [
     "app/adc/joystick_potentiometer_3d",
     "app/adc/potentiometer_reading_voltage",
     "app/adc/ad_multichannel",
+    # I2C
+    "app/i2c/i2c_soft_mpu6050",
+    "app/i2c/i2c_hard_mpu6050",
+    # SPI
     # C 绑定
     # "app/ffi/ffi_hello",
     # "app/ffi/bindgen_hello", // 暂不支持
-    # 组建库
+    # 组件库
     "core/neopixel",
     "core/oled",
     "core/pcnt_encoder",
+    "core/mpu6050",
+    # "core/w25q64",
     "core/esp32s3-nrf24l01",
 ]

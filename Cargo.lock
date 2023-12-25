@@ -962,6 +962,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "i2c_hard_mpu6050"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "mpu6050",
+ "toml-cfg",
+]
+
+[[package]]
+name = "i2c_soft_mpu6050"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "mpu6050",
+ "toml-cfg",
+]
+
+[[package]]
 name = "iana-time-zone"
 version = "0.1.58"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1211,6 +1237,14 @@ name = "minimal-lexical"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a"
+
+[[package]]
+name = "mpu6050"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "esp-idf-hal",
+]
 
 [[package]]
 name = "nb"

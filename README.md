@@ -25,7 +25,7 @@
 - [x] [按钮](app/basic/button/README.md)
 - [x] [按钮 Toggle](app/basic/button_toggle/README.md)
 - [x] [按钮异步任务](app/basic/button_async/README.md)
-- [x] [I2C OLED 显示字符](app/basic/oled_show_str/README.md)
+- [x] [OLED 显示字符](app/basic/oled_show_str/README.md)
 - [x] [蜂鸣器](app/basic/buzzer/README.md)
 - [x] [对射式红外传感器控制蜂鸣器](app/basic/opposing_infrared_sensor_buzzer/README.md)
 - [x] [光敏传感器控制蜂鸣器](app/basic/light_sensor_control_buzzer/README.md)
@@ -68,8 +68,6 @@
 - [x] [RGB LED 闪烁](app/hardware/hardware_rgb_led/README.md)
 - [x] [RGB LED 灯珠闪烁](app/hardware/hardware_multiple_rgb_led/README.md)
 
-### I2C
-
 ### 延迟
 
 - [x] [FreeRtos 延迟](app/delay/freertos_delay/README.md)
@@ -83,16 +81,25 @@
 - [x] [电位器读取电压](app/adc/potentiometer_reading_voltage/README.md)
 - [x] [多通道读取数据](app/adc/ad_multichannel/README.md)
 
+### I2C
+
+- [ ] [软件读写 MPU6050](app/i2c/i2c_soft_mpu6050/README.md)
+- [ ] [硬件读写 MPU6050](app/i2c/i2c_hard_mpu6050/README.md)
+
+### SPI
+
 ### C 绑定
 
 - [x] [FFI Hello](app/ffi/ffi_hello/README.md)
 - [ ] [Bindgen Hello](app/ffi/bindgen_hello/README.md)
 
-### 组建库
+### 组件库
 
 - [x] [neopixel RGB LED](core/neopixel/README.md)
 - [x] [OLED 显示屏](core/oled/README.md)
 - [x] [PCNT 解码旋转编码器](core/pcnt_encoder/README.md)
+- [ ] [I2C MPU6050](core/mpu6050/README.md)
+- [ ] [SPI W25Q64](core/w25q64/README.md)
 - [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
 ## 其他示例库
