@@ -48,7 +48,7 @@
 
 - [x] [LEDC 简单示例](app/ledc/ledc_simple/README.md)
 - [x] [LEDC 多线程](app/ledc/ledc_threads/README.md)
-- [ ] [PWM 驱动舵机](app/ledc/pwm_driven_servo/README.md)
+- [x] [PWM 驱动舵机](app/ledc/pwm_driven_servo/README.md)
 - [x] [PWM 驱动直流电机](app/ledc/pwm_driven_motor/README.md)
 
 ### RMT

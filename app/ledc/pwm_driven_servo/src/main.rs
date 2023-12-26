@@ -27,6 +27,7 @@ fn main() -> anyhow::Result<()> {
         // 设置 PWM 信号的频率为 50 Hz
         &TimerConfig::new()
             .frequency(50.Hz())
+            // 使用10位分辨率意味着有1024个可能的占空比值
             .resolution(Resolution::Bits10),
     )?;
 
@@ -43,21 +44,34 @@ fn main() -> anyhow::Result<()> {
     let max_duty = channel.get_max_duty();
     log::info!("Max Duty: {}", max_duty);
 
-    let mut angle = 0;
+    let mut angle = -90;
+
+    // 20ms         max_duty=1023
+    // 0.5ms  -90°    (0.5ms / 20ms) * 1024 ≈ 25.6
+    // 1.5ms  0°     (1.5ms / 20ms) * 1024 ≈ 76.8
+    // 2ms    45°    (2ms / 20ms) * 1024 ≈ 102.4
+    // 2.5ms  90°    (2.5ms / 20ms) * 1024 ≈ 128
+
+    // 舵机重置
+    log::info!("angle: {}  duty: {}", 0, 25.6);
+    channel.set_duty(26)?;
     loop {
         if !get_key_down(&mut button) {
             FreeRtos::delay_ms(10);
             continue;
         }
         angle += 30;
-        if angle > 180 {
-            angle = 0
+        if angle > 90 {
+            angle = -90
         }
+        let duty = if angle < 0 {
+            ((-1.0 * angle as f32 - 90.0) * (76.8 - 25.6) / (0.0 - (-90.0)) + 25.6) as u32
+        } else {
+            (angle as f32 * (128.0 - 76.8) / (90.0 - 0.0) + 76.8) as u32
+        };
 
-        let duty = angle * max_duty / 180;
         log::info!("angle: {}  duty: {}", angle, duty);
         channel.set_duty(duty)?;
-        FreeRtos::delay_ms(1000);
     }
 }
 
