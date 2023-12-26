@@ -20,10 +20,6 @@
 - [串行接口收发 HEX 数据包](./app/usart/serial_hex_packet)
 - [串行接口收发文本数据包](./app/usart/serial_text_packet)
 
-### I2C 通信
-
-- [I2C MPU6050 crate 读写](./app/i2c/i2c_mpu6050_crate)
-
 ### SPI 通信
 
 - [SPI 软件读写 W25Q64](./app/spi/spi_soft_w25q64)

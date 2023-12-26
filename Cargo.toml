@@ -116,6 +116,7 @@ members = [
     # I2C
     "app/i2c/i2c_soft_mpu6050",
     "app/i2c/i2c_hard_mpu6050",
+    "app/i2c/i2c_mpu6050_crate",
     # SPI
     # C 绑定
     # "app/ffi/ffi_hello",
@@ -127,4 +128,5 @@ members = [
     "core/mpu6050",
     # "core/w25q64",
     "core/esp32s3-nrf24l01",
+    "core/esp32s3-mpu6050",
 ]

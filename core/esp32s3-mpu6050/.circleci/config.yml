@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  1dot64:
+    docker:
+      - image: cimg/rust:1.64.0
+    steps:
+      - checkout
+      - run: 
+          name: build and test
+          command: cargo build
+  1dot63:
+    docker:
+      - image: cimg/rust:1.63.0
+    steps:
+      - checkout
+      - run:
+          name: build and test
+          command: cargo build
+  1dot62:
+    docker:
+      - image: cimg/rust:1.62.0
+    steps:
+      - checkout
+      - run:
+          name: build and test
+          command: cargo build
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - 1dot64
+      - 1dot63
+      - 1dot62
+
