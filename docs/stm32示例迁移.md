@@ -55,15 +55,10 @@
 - [读写内部 FLASH](./app/flash/internal_flash)
 - [读取芯片 ID](./app/flash/read_chip_id)
 
-### FreeRTOS 实时操作系统
-
-- x[FreeRTOS-闪烁](./app/free_rtos/free_rtos_blinky)
-
 ### 常用外设工具库封装
 
 - [硬件工具库](./core/hardware)
   pub mod flash_store;
   pub mod key;
-  pub mod mpu6050;
   pub mod serial;
   pub mod w25q64;

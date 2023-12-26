@@ -30,6 +30,6 @@ fn main() -> anyhow::Result<()> {
         // 打印读取到的数据
         println!("Accel: ({}, {}, {})", data.acc_x, data.acc_y, data.acc_z);
         println!("Gyro: ({}, {}, {})", data.gyro_x, data.gyro_y, data.gyro_z);
-        FreeRtos::delay_ms(1000);
+        FreeRtos::delay_ms(500);
     }
 }

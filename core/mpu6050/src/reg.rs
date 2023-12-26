@@ -4,7 +4,6 @@ use super::conf::*;
 pub use super::AccelGyroData;
 
 use esp_idf_hal::{
-    delay::FreeRtos,
     gpio::{InputOutput, InputPin, Output, OutputPin, Pin, PinDriver},
     sys::EspError,
 };
@@ -32,7 +31,6 @@ where
         } else {
             self.scl.set_high()?;
         }
-        FreeRtos::delay_us(10_u32);
         Ok(())
     }
 
@@ -42,13 +40,11 @@ where
         } else {
             self.sda.set_high()?;
         }
-        FreeRtos::delay_us(10_u32);
         Ok(())
     }
 
     fn i2c_r_sda(&mut self) -> Result<u8, EspError> {
         let bit_value = self.sda.is_high();
-        FreeRtos::delay_us(10_u32);
         if bit_value {
             Ok(1)
         } else {

@@ -83,7 +83,7 @@
 
 ### I2C
 
-- [ ] [软件读写 MPU6050](app/i2c/i2c_soft_mpu6050/README.md)
+- [x] [软件读写 MPU6050](app/i2c/i2c_soft_mpu6050/README.md)
 - [x] [硬件读写 MPU6050](app/i2c/i2c_hard_mpu6050/README.md)
 
 ### SPI
