@@ -113,6 +113,8 @@ members = [
     "app/adc/joystick_potentiometer_3d",
     "app/adc/potentiometer_reading_voltage",
     "app/adc/ad_multichannel",
+    # DMA 传输数据
+    "app/dma/print_memory_address",
     # I2C
     "app/i2c/i2c_soft_mpu6050",
     "app/i2c/i2c_hard_mpu6050",

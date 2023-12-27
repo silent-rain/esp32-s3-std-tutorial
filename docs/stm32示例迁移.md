@@ -2,7 +2,6 @@
 
 ### DMA 数据转运
 
-- [打印内存地址](./app/dma/print_memory_address)
 - [DMA 数据转运](./app/dma/dma_data_transfer)
 - [DMA 数据连续转运](./app/dma/dma_data_continuous_transfer)
 - [DMA+AD 多通道](./app/dma/scan_dma_and_ad_multichannel)

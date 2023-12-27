@@ -81,6 +81,10 @@
 - [x] [电位器读取电压](app/adc/potentiometer_reading_voltage/README.md)
 - [x] [多通道读取数据](app/adc/ad_multichannel/README.md)
 
+### DMA 传输数据
+
+- [x] [打印内存地址](app/dma/print_memory_address/README.md)
+
 ### I2C
 
 - [x] [软件读写 MPU6050](app/i2c/i2c_soft_mpu6050/README.md)
@@ -118,6 +122,7 @@
 
 ## 参考文档
 
+- [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/index.html)
 - [The Rust on ESP Book 简体中文版](https://narukara.github.io/rust-on-esp-book-zh-cn/introduction.html)
 - [ESP32-S3 系列芯片介绍](https://blog.csdn.net/MJiarong_personal/article/details/121726585)
 - [esp-idf C 绑定参考](https://esp-rs.github.io/esp-idf-svc/esp_idf_svc/index.html)
