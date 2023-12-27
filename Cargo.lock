@@ -993,6 +993,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "i2c_master_slave"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "mpu6050",
+ "toml-cfg",
+]
+
+[[package]]
 name = "i2c_mpu6050_crate"
 version = "0.1.0"
 dependencies = [
@@ -1007,6 +1020,19 @@ dependencies = [
 
 [[package]]
 name = "i2c_soft_mpu6050"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "log",
+ "mpu6050",
+ "toml-cfg",
+]
+
+[[package]]
+name = "i2c_ssd1306"
 version = "0.1.0"
 dependencies = [
  "anyhow",

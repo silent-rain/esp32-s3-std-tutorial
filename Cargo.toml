@@ -119,6 +119,8 @@ members = [
     "app/i2c/i2c_soft_mpu6050",
     "app/i2c/i2c_hard_mpu6050",
     "app/i2c/i2c_mpu6050_crate",
+    "app/i2c/i2c_ssd1306",
+    "app/i2c/i2c_master_slave",
     # SPI
     # C 绑定
     # "app/ffi/ffi_hello",

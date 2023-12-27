@@ -90,6 +90,8 @@
 - [x] [软件读写 MPU6050](app/i2c/i2c_soft_mpu6050/README.md)
 - [x] [硬件读写 MPU6050](app/i2c/i2c_hard_mpu6050/README.md)
 - [x] [MPU6050 crate](app/i2c/i2c_mpu6050_crate/README.md)
+- [x] [SSD13063 闪烁黑白颜色](app/i2c/i2c_ssd1306/README.md)
+- [x] [主机和从机之间的 I2C 通信](app/i2c/i2c_master_slave/README.md)
 
 ### SPI
 
