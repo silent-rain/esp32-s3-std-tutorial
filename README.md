@@ -112,7 +112,7 @@
 - [x] [OLED 显示屏](core/oled/README.md)
 - [x] [PCNT 解码旋转编码器](core/pcnt_encoder/README.md)
 - [x] [I2C MPU6050](core/mpu6050/README.md)
-- [ ] [SPI W25Q64](core/w25q64/README.md)
+- [x] [SPI W25Q64](core/w25q64/README.md)
 - [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
 
 ## 其他示例库

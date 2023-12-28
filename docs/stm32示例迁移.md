@@ -19,10 +19,6 @@
 - [串行接口收发 HEX 数据包](./app/usart/serial_hex_packet)
 - [串行接口收发文本数据包](./app/usart/serial_text_packet)
 
-### SPI 通信
-
-- [w25q crate 读写 W25Q64](./app/spi/spi_w25q_crate)
-
 ### RTC
 
 - [RTC 实时时钟计数器](./app/rtc/rtc_counter)
