@@ -122,6 +122,11 @@ members = [
     "app/i2c/i2c_ssd1306",
     "app/i2c/i2c_master_slave",
     # SPI
+    "app/spi/spi_loopback",
+    # "app/spi/spi_loopback_async",
+    # "app/spi/spi_st7789",
+    "app/spi/spi_soft_w25q64",
+    "app/spi/spi_hard_w25q64",
     # C 绑定
     # "app/ffi/ffi_hello",
     # "app/ffi/bindgen_hello", // 暂不支持
@@ -130,7 +135,7 @@ members = [
     "core/oled",
     "core/pcnt_encoder",
     "core/mpu6050",
-    # "core/w25q64",
+    "core/w25q64",
     "core/esp32s3-nrf24l01",
     "core/esp32s3-mpu6050",
 ]

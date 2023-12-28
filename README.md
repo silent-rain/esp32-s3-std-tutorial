@@ -95,6 +95,12 @@
 
 ### SPI
 
+- [x] [SPI 回环测试](app/spi/spi_loopback/README.md)
+- [ ] [SPI 异步回环测试](app/spi/spi_loopback_async/README.md)
+- [ ] [ST7789 LCD 显示屏](app/spi/spi_st7789/README.md)
+- [x] [软件读写 W25Q64](app/spi/spi_hard_w25q64/README.md)
+- [x] [硬件读写 W25Q64](app/spi/spi_soft_w25q64/README.md)
+
 ### C 绑定
 
 - [x] [FFI Hello](app/ffi/ffi_hello/README.md)

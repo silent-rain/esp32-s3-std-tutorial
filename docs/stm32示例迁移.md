@@ -21,8 +21,6 @@
 
 ### SPI 通信
 
-- [SPI 软件读写 W25Q64](./app/spi/spi_soft_w25q64)
-- [SPI 硬件读写 W25Q64](./app/spi/spi_hard_w25q64)
 - [w25q crate 读写 W25Q64](./app/spi/spi_w25q_crate)
 
 ### RTC
