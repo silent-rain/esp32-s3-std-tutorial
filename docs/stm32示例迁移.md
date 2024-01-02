@@ -8,17 +8,6 @@
 - [DMA+AD 多通道循环读取](./app/dma/scan_dma_and_ad_multichannel_loop)
 - [DMA+AD 多通道分批读取](./app/dma/scan_dma_and_ad_multichannel_peek)
 
-### USART 串行接口
-
-- [串行接口配置](./app/usart/serial_config)
-- [串行接口发送与接收](./app/usart/serial_tx_and_rx)
-- [串行接口重新配置](./app/usart/serial_reconfigure)
-- [串行接口写入格式化字符串](./app/usart/serial_fmt)
-- [串行接口连续发送与接收](./app/usart/serial_continuous_tx_and_rx)
-- [串行接口中断](./app/usart/serial_interrupt_idle)
-- [串行接口收发 HEX 数据包](./app/usart/serial_hex_packet)
-- [串行接口收发文本数据包](./app/usart/serial_text_packet)
-
 ### RTC
 
 - [RTC 实时时钟计数器](./app/rtc/rtc_counter)
@@ -50,4 +39,3 @@
   pub mod flash_store;
   pub mod key;
   pub mod serial;
-  pub mod w25q64;

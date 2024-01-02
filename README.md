@@ -101,6 +101,15 @@
 - [x] [软件读写 W25Q64](app/spi/spi_hard_w25q64/README.md)
 - [x] [硬件读写 W25Q64](app/spi/spi_soft_w25q64/README.md)
 
+### UART
+
+- [x] [UART 回环测试](app/uart/uart_loopback/README.md)
+- [x] [UART 异步回环测试](app/uart/uart_loopback_async/README.md)
+- [x] [UART 重新配置](app/uart/uart_reconfigure/README.md)
+- [x] [串口写入格式化字符串](app/uart/uart_fmt/README.md)
+- [x] [连续发送与接收](app/uart/uart_continuous_tx_and_rx/README.md)
+- [ ] [串口中断](app/uart/uart_isr/README.md)
+
 ### C 绑定
 
 - [x] [FFI Hello](app/ffi/ffi_hello/README.md)
@@ -111,6 +120,7 @@
 - [x] [neopixel RGB LED](core/neopixel/README.md)
 - [x] [OLED 显示屏](core/oled/README.md)
 - [x] [PCNT 解码旋转编码器](core/pcnt_encoder/README.md)
+- [x] [串口工具集](core/serial/README.md)
 - [x] [I2C MPU6050](core/mpu6050/README.md)
 - [x] [SPI W25Q64](core/w25q64/README.md)
 - [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
