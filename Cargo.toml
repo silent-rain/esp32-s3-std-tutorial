@@ -133,7 +133,7 @@ members = [
     "app/uart/uart_reconfigure",
     "app/uart/uart_fmt",
     "app/uart/uart_continuous_tx_and_rx",
-    "app/uart/uart_isr",
+    # "app/uart/uart_isr",
     # C 绑定
     # "app/ffi/ffi_hello",
     # "app/ffi/bindgen_hello", // 暂不支持

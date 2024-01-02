@@ -2142,19 +2142,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "uart_isr"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "embuild",
- "enumset",
- "esp-idf-svc",
- "log",
- "serial",
- "toml-cfg",
-]
-
-[[package]]
 name = "uart_loopback"
 version = "0.1.0"
 dependencies = [
