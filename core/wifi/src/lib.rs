@@ -2,6 +2,7 @@ use anyhow::{bail, Result};
 use esp_idf_svc::{
     eventloop::EspSystemEventLoop,
     hal::peripheral,
+    sys::nvs_flash_init,
     wifi::{AuthMethod, BlockingWifi, ClientConfiguration, Configuration, EspWifi},
 };
 use log::info;
@@ -12,7 +13,11 @@ pub fn wifi(
     modem: impl peripheral::Peripheral<P = esp_idf_svc::hal::modem::Modem> + 'static,
     sysloop: EspSystemEventLoop,
 ) -> Result<Box<EspWifi<'static>>> {
-    let mut auth_method = AuthMethod::WPA2Personal;
+    unsafe {
+        nvs_flash_init();
+    }
+
+    let mut auth_method = AuthMethod::WPAWPA2Personal;
     if ssid.is_empty() {
         bail!("Missing WiFi name")
     }
