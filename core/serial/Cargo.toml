@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 esp-idf-hal = "0.42.5"
-anyhow = "1.0.75"
+anyhow = "1.0.79"

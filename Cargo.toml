@@ -34,7 +34,7 @@ esp-idf-svc = { version = "0.47.3", default-features = false }
 enumset = "1.1.3"
 toml-cfg = "0.1.3"
 log = { version = "0.4", default-features = false }
-anyhow = "1.0.75"
+anyhow = "1.0.79"
 
 [build-dependencies]
 embuild = "0.31.4"
@@ -61,6 +61,7 @@ idf_path = "/home/one/.espup/esp-idf"
 
 [workspace]
 members = [
+    # ==== HAL 库示例 ====
     # 开门狗
     # "app/wdg/code_disable_wdg",
     "app/wdg/sdkconfig_disable_wdg",
@@ -146,4 +147,10 @@ members = [
     "core/w25q64",
     "core/esp32s3-nrf24l01",
     "core/esp32s3-mpu6050",
+
+    # ==== esp-idf-svc 库示例 ====
+    # 入门级示例
+    "app/intro/wifi_check",
+    # 组件库
+    "core/wifi",
 ]

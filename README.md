@@ -9,7 +9,7 @@
 - 图片来源于网络。
 - ESP32-S3-DevKitC-1 标记是 RGB@IO48 引脚。
 
-## 示例目录
+## HAL 库示例目录
 
 ### 开门狗
 
@@ -124,6 +124,18 @@
 - [x] [I2C MPU6050](core/mpu6050/README.md)
 - [x] [SPI W25Q64](core/w25q64/README.md)
 - [ ] [esp32s3-nrf24l01](core/esp32s3-nrf24l01/README.md)
+
+## esp-idf-svc 库示例目录
+
+### 入门级示例
+
+- [x] [Wifi 检查](app/intro/wifi_check/README.md)
+
+### 高级示例
+
+### 组件库
+
+- [x] [Wifi 助手](core/wifi/README.md)
 
 ## 其他示例库
 

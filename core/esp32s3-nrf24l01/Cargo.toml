@@ -21,6 +21,6 @@ repository = ""
 
 [dependencies]
 esp-idf-hal = "0.42.5"
-anyhow = "1.0.75"
+anyhow = "1.0.79"
 bitfield = "0.14.0"
 nb = "1.1.0"
