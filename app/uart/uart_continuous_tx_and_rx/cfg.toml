@@ -1,3 +1,3 @@
-[esp32-s3-std-tutorial]
+[uart_continuous_tx_and_rx]
 wifi_ssid = "Silent Rain"
 wifi_psk = "pass"

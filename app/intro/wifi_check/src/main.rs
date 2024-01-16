@@ -32,7 +32,7 @@ fn main() -> anyhow::Result<()> {
     let app_config = CONFIG;
 
     log::info!(
-        "wifi_ssid: {}, wifi_psk: {}",
+        "======= wifi_ssid: {}, wifi_psk: {}",
         app_config.wifi_ssid,
         app_config.wifi_psk
     );

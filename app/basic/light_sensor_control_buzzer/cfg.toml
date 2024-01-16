@@ -1,3 +1,3 @@
-[esp32-s3-std-tutorial]
+[light_sensor_control_buzzer]
 wifi_ssid = "Silent Rain"
 wifi_psk = "pass"
