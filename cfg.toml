@@ -5,3 +5,11 @@ wifi_psk = "pass"
 [wifi_check]
 wifi_ssid = "Silent Rain"
 wifi_psk = "asdfghjkl123"
+
+[http_client]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"
+
+[https_client]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"

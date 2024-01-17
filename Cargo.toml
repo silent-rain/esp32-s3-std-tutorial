@@ -151,6 +151,8 @@ members = [
     # ==== esp-idf-svc 库示例 ====
     # 入门级示例
     "app/intro/wifi_check",
+    "app/intro/http_client",
+    "app/intro/https_client",
     # 组件库
     "core/wifi",
 ]

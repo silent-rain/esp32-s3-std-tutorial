@@ -130,6 +130,8 @@
 ### 入门级示例
 
 - [x] [Wifi 检查](app/intro/wifi_check/README.md)
+- [x] [HTTP 客户端](app/intro/http_client/README.md)
+- [x] [HTTPS 客户端](app/intro/https_client/README.md)
 
 ### 高级示例
 
