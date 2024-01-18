@@ -1,0 +1,3 @@
+[http_ureq_client]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"

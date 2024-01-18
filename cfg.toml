@@ -14,6 +14,10 @@ wifi_psk = "asdfghjkl123"
 wifi_ssid = "Silent Rain"
 wifi_psk = "asdfghjkl123"
 
+[http_ureq_client]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"
+
 
 [http_server]
 wifi_ssid = "Silent Rain"
