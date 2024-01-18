@@ -135,6 +135,7 @@
 - [ ] [Ureq HTTP 客户端](app/intro/http_ureq_client/README.md)
 - [x] [HTTP 服务器](app/intro/http_server/README.md)
 - [x] [温度传感器 HTTP 服务器](app/intro/http_server_shtcx/README.md)
+- [x] [Vue HTTP 服务器](app/intro/http_server_vue/README.md)
 
 ### 高级示例
 

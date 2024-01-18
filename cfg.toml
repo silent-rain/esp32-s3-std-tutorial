@@ -26,3 +26,8 @@ wifi_psk = "asdfghjkl123"
 [http_server_shtcx]
 wifi_ssid = "Silent Rain"
 wifi_psk = "asdfghjkl123"
+
+[http_server_vue]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"
+

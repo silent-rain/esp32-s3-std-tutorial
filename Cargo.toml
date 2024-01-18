@@ -156,6 +156,7 @@ members = [
     "app/intro/http_ureq_client",
     "app/intro/http_server",
     "app/intro/http_server_shtcx",
+    "app/intro/http_server_vue",
     # 组件库
     "core/wifi",
 ]
