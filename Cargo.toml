@@ -153,6 +153,8 @@ members = [
     "app/intro/wifi_check",
     "app/intro/http_client",
     "app/intro/https_client",
+    "app/intro/http_server",
+    "app/intro/http_server_shtcx",
     # 组件库
     "core/wifi",
 ]

@@ -13,3 +13,12 @@ wifi_psk = "asdfghjkl123"
 [https_client]
 wifi_ssid = "Silent Rain"
 wifi_psk = "asdfghjkl123"
+
+
+[http_server]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"
+
+[http_server_shtcx]
+wifi_ssid = "Silent Rain"
+wifi_psk = "asdfghjkl123"

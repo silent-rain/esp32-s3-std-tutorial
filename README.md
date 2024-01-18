@@ -132,6 +132,8 @@
 - [x] [Wifi 检查](app/intro/wifi_check/README.md)
 - [x] [HTTP 客户端](app/intro/http_client/README.md)
 - [x] [HTTPS 客户端](app/intro/https_client/README.md)
+- [x] [HTTP 服务器](app/intro/http_server/README.md)
+- [x] [温度传感器 HTTP 服务器](app/intro/http_server_shtcx/README.md)
 
 ### 高级示例
 
