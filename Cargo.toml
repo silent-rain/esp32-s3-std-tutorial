@@ -149,14 +149,14 @@ members = [
     "core/esp32s3-mpu6050",
 
     # ==== esp-idf-svc 库示例 ====
-    # 入门级示例
-    "app/intro/wifi_check",
-    "app/intro/http_client",
-    "app/intro/https_client",
-    "app/intro/http_ureq_client",
-    "app/intro/http_server",
-    "app/intro/http_server_shtcx",
-    "app/intro/http_server_vue",
+    # 网络示例
+    "app/http/wifi_check",
+    "app/http/http_client",
+    "app/http/https_client",
+    "app/http/http_ureq_client",
+    "app/http/http_server",
+    "app/http/http_server_shtcx",
+    "app/http/http_server_vue",
     # 组件库
     "core/wifi",
 ]

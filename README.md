@@ -127,15 +127,15 @@
 
 ## esp-idf-svc 库示例目录
 
-### 入门级示例
+### 网络示例
 
-- [x] [Wifi 检查](app/intro/wifi_check/README.md)
-- [x] [HTTP 客户端](app/intro/http_client/README.md)
-- [x] [HTTPS 客户端](app/intro/https_client/README.md)
-- [ ] [Ureq HTTP 客户端](app/intro/http_ureq_client/README.md)
-- [x] [HTTP 服务器](app/intro/http_server/README.md)
-- [x] [温度传感器 HTTP 服务器](app/intro/http_server_shtcx/README.md)
-- [x] [Vue HTTP 服务器](app/intro/http_server_vue/README.md)
+- [x] [Wifi 检查](app/http/wifi_check/README.md)
+- [x] [HTTP 客户端](app/http/http_client/README.md)
+- [x] [HTTPS 客户端](app/http/https_client/README.md)
+- [ ] [Ureq HTTP 客户端](app/http/http_ureq_client/README.md)
+- [x] [HTTP 服务器](app/http/http_server/README.md)
+- [x] [温度传感器 HTTP 服务器](app/http/http_server_shtcx/README.md)
+- [x] [Vue HTTP 服务器](app/http/http_server_vue/README.md)
 
 ### 高级示例
 
@@ -159,6 +159,6 @@
 ## 参考文档
 
 - [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/index.html)
-- [The Rust on ESP Book 简体中文版](https://narukara.github.io/rust-on-esp-book-zh-cn/introduction.html)
+- [The Rust on ESP Book 简体中文版](https://narukara.github.io/rust-on-esp-book-zh-cn/httpduction.html)
 - [ESP32-S3 系列芯片介绍](https://blog.csdn.net/MJiarong_personal/article/details/121726585)
 - [esp-idf C 绑定参考](https://esp-rs.github.io/esp-idf-svc/esp_idf_svc/index.html)
