@@ -100,6 +100,7 @@
 - [ ] [ST7789 LCD 显示屏](app/spi/spi_st7789/README.md)
 - [x] [软件读写 W25Q64](app/spi/spi_hard_w25q64/README.md)
 - [x] [硬件读写 W25Q64](app/spi/spi_soft_w25q64/README.md)
+- [ ] [NRF24L01](app/spi/spi_nrf24l01/README.md)
 
 ### UART
 

@@ -2168,6 +2168,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "spi_nrf24l01"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "embuild",
+ "enumset",
+ "esp-idf-svc",
+ "esp32s3-nrf24l01",
+ "log",
+ "toml-cfg",
+]
+
+[[package]]
 name = "spi_soft_w25q64"
 version = "0.1.0"
 dependencies = [

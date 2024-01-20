@@ -128,6 +128,7 @@ members = [
     # "app/spi/spi_st7789",
     "app/spi/spi_soft_w25q64",
     "app/spi/spi_hard_w25q64",
+    "app/spi/spi_nrf24l01",
     # UART
     "app/uart/uart_loopback",
     "app/uart/uart_loopback_async",

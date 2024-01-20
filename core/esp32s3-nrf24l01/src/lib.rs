@@ -16,7 +16,7 @@ use core::fmt::Debug;
 
 mod config;
 use esp_idf_hal::{
-    gpio::{InputPin, Output, OutputPin, PinDriver},
+    gpio::{AnyIOPin, InputPin, Output, OutputPin, PinDriver},
     peripheral::Peripheral,
     prelude::FromValueType,
     spi::{self, SpiDeviceDriver, SpiDriver, SpiDriverConfig, SPI2},
@@ -59,35 +59,29 @@ pub const MAX_ADDR_BYTES: usize = 5;
 /// * [`TxMode<D>`](struct.TxMode.html)
 ///
 /// where `D: `[`Device`](trait.Device.html)
-pub struct NRF24L01<'d, E, CE, CSN>
+pub struct NRF24L01<'d, E>
 where
     E: Debug,
-    CE: OutputPin,
-    CSN: OutputPin,
 {
-    ce: PinDriver<'d, CE, Output>,
-    csn: PinDriver<'d, CSN, Output>,
+    ce: PinDriver<'d, AnyIOPin, Output>,
+    csn: PinDriver<'d, AnyIOPin, Output>,
     spi: SpiDeviceDriver<'d, SpiDriver<'d>>,
     config: Config,
     _e: *const E,
 }
 
-impl<'d, E, CE, CSN> fmt::Debug for NRF24L01<'d, E, CE, CSN>
+impl<'d, E> fmt::Debug for NRF24L01<'d, E>
 where
     E: Debug,
-    CE: OutputPin,
-    CSN: OutputPin,
 {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "NRF24L01")
     }
 }
 
-impl<'d, E, CE, CSN> NRF24L01<'d, E, CE, CSN>
+impl<'d, E> NRF24L01<'d, E>
 where
     E: Debug,
-    CE: OutputPin,
-    CSN: OutputPin,
     error::Error<E>: core::convert::From<esp_idf_hal::sys::EspError>,
 {
     /// Construct a new driver instance.
@@ -97,8 +91,8 @@ where
         miso: Option<impl Peripheral<P = impl InputPin + OutputPin> + 'd>,
         mosi: impl Peripheral<P = impl OutputPin> + 'd,
         cs: Option<impl Peripheral<P = impl OutputPin> + 'd>,
-        ce: CE,
-        csn: CSN,
+        ce: AnyIOPin,
+        csn: AnyIOPin,
     ) -> Result<StandbyMode<Self>, Error<E>> {
         let driver = SpiDriver::new::<SPI2>(spi2, sclk, mosi, miso, &SpiDriverConfig::new())?;
 
@@ -138,10 +132,8 @@ where
     }
 }
 
-impl<'d, E, CE, CSN> Device for NRF24L01<'d, E, CE, CSN>
+impl<'d, E> Device for NRF24L01<'d, E>
 where
-    CE: OutputPin,
-    CSN: OutputPin,
     E: Debug,
 {
     type Error = Error<E>;
